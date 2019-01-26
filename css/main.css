@@ -5,3 +5,26 @@
 .title-cursor {
     font-weight: bold;
 }
+
+.fa, .fab, .fa:hover, .fab:hover {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa, .fab {
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 6rem;
+    background: #bbbbbb;
+    color: black;
+}
+
+.fa:hover, .fab:hover {
+    padding: 2rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: black;
+    color: #bbbbbb;
+}
