@@ -1,9 +1,29 @@
+* {
+    color: #333333;
+}
+
+h2 {
+    text-align: center;
+}
+
+.infos {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.header {
+    margin-bottom: 4rem;
+}
+
 .title {
     font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    margin-bottom: 0;
 }
 
 .title-cursor {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .fa, .fab, .fa:hover, .fab:hover {
@@ -17,14 +37,28 @@
     padding: 1rem;
     font-size: 2rem;
     margin-bottom: 6rem;
-    background: #bbbbbb;
-    color: black;
+    background: #E5E5E5;
+    color: #333333;
 }
 
 .fa:hover, .fab:hover {
     padding: 2rem;
     font-size: 3rem;
     margin-bottom: 1rem;
-    background: black;
-    color: #bbbbbb;
+    background: #333333;
+    color: #E5E5E5;
 }
+
+.subject {
+    background: #333333;
+    padding: 8px 15px 8px 15px;
+    border-radius: 10px;
+    color: #E5E5E5;
+    margin: 2px;
+}
+
+.subject-wrapper {
+    padding: 0;
+}
+
+
