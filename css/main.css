@@ -1,10 +1,12 @@
-* {
+body {
     color: #333333;
 }
 
 h2 {
     text-align: center;
 }
+
+.boldify { font-weight: bold; }
 
 .infos {
     font-family: "Lucida Console", Monaco, monospace;
@@ -20,6 +22,7 @@ h2 {
     font-family: "Lucida Console", Monaco, monospace;
     font-weight: bold;
     margin-bottom: 0;
+    cursor: pointer;
 }
 
 .title-cursor {
@@ -61,4 +64,24 @@ h2 {
     padding: 0;
 }
 
+.history {
+    background: #333333;
+    color: #E5E5E5;
+    border-radius: 10px;
+}
 
+.history-menu {
+    color: #E5E5E5;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 2rem;
+    /*font-size: 2rem;*/
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.history-content {
+    text-align: center;
+    /*font-size: 2rem;*/
+    padding: 3rem;
+}
