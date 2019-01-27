@@ -2,10 +2,10 @@ let previousHistory = '2015';
 let currentHistory = '2015';
 
 experiences = {
-    psi: "stage psi informatique",
-    touton: "stage touton",
-    helloasso: "alternance helloasso",
-    cdiscount: "alternance cdiscount"
+    psi: "Stage développement full stack à PSI informatique",
+    touton: "Stage développement full stack à Touton",
+    helloasso: "Alternance à Helloasso",
+    cdiscount: "Alternance à Cdiscount"
 };
 
 const histories = {
@@ -20,22 +20,22 @@ const histories = {
         experiences: [experiences.touton, experiences.helloasso]
     },
     2018: {
-        degree: "Epsi, Titre RNCP Niveau II - Concepteur développeur informatique -",
+        degree: "Epsi, Titre RNCP Niveau II (DIRRECT)",
         experiences: [experiences.helloasso, experiences.cdiscount]
     },
     2019: {
-        degree: "Examen du TOIC",
+        degree: "Examen du TOEIC",
         experiences: [experiences.cdiscount]
     },
     2020: {
-        degree: "Epsi, Titre RNCP Niveau I - Expert en informatique et systèmes d’informations -",
+        degree: "Epsi, Titre RNCP Niveau I",
         experiences: [experiences.cdiscount]
     },
     2022: {
-        degree: "Master en Mathématiques"
+        degree: "Master Mathématiques et applications"
     },
     2025: {
-        degree: "Doctorat en Recherche Opérationnel ?"
+        degree: "Doctorat..."
     }
 };
 
@@ -45,17 +45,36 @@ const histories = {
         let newMenu = '<h5 id="history-menu-' + year + '" class="history-menu one column">' + year + '</h5>';
         document.getElementById('history-menu').innerHTML += newMenu;
 
-        let newBody = `
-            <div hidden id="degree-` + year + `">
-                <div class="history-sub row">
-                    <h5 class="no-margin history-content ten columns sub">` + histories[year].degree + `</h5>
-                    <h5 class="no-margin history-info sub">Diplômes</h5>
-                </div>
-                <div class="history-sub row">
-                    <h5 class="no-margin history-content ten columns sub">` + histories[year].experiences + `</h5>
-                    <h5 class="no-margin history-info sub">Experiences</h5>
-                </div>
-            </div>`;
+        // let knewBody = `
+        //     <div hidden id="degree-` + year + `">
+        //         <div class="history-sub row">
+        //             <h5 class="no-margin history-content ten columns sub">` + histories[year].degree + `</h5>
+        //             <h5 class="no-margin history-info sub">Diplômes</h5>
+        //         </div>
+        //         <div class="history-sub row">
+        //             <h5 class="no-margin history-content ten columns sub">` + histories[year].experiences + `</h5>
+        //             <h5 class="no-margin history-info sub">Experiences</h5>
+        //         </div>
+        //     </div>`;
+
+        let newBody = '<div hidden id="degree-' + year + '">';
+
+        if (histories[year].degree !== undefined) {
+            newBody += '<div class="history-sub row">';
+            newBody += '<h5 class="no-margin history-content ten columns sub">' + histories[year].degree + '</h5>';
+            newBody += '<h5 class="no-margin history-info sub">Diplômes</h5>';
+            newBody += '</div>';
+        }
+
+        if (histories[year].experiences !== undefined) {
+            newBody += '<div class="history-sub row">';
+            newBody += '<h5 class="no-margin history-content ten columns sub">' +
+                histories[year].experiences.join(" | ") + '</h5>';
+            newBody += '<h5 class="no-margin history-info sub">Experiences</h5>';
+            newBody += '</div>';
+        }
+
+        newBody += '</div>';
 
         document.getElementById('history-body').innerHTML += newBody;
     }
