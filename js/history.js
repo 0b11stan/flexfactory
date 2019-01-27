@@ -10,32 +10,53 @@ experiences = {
 
 const histories = {
     2015: {
-        degree: "Bac S option ISN (Informatique et Science du Numérique)"
+        degree: {
+            info: "Bac S option ISN (Informatique et Science du Numérique)",
+            done: true
+        }
     },
     2016: {
         experiences: [experiences.psi]
     },
     2017: {
-        degree: "BTS SIO option SLAM spé Mathématiques",
+        degree: {
+            info: "BTS SIO option SLAM spé Mathématiques",
+            done: true
+        },
         experiences: [experiences.touton, experiences.helloasso]
     },
     2018: {
-        degree: "Epsi, Titre RNCP Niveau II (DIRRECT)",
+        degree: {
+            info: "Epsi, Titre RNCP Niveau II (DIRRECT)",
+            done: true
+        },
         experiences: [experiences.helloasso, experiences.cdiscount]
     },
     2019: {
-        degree: "Examen du TOEIC",
+        degree: {
+            info: "Examen du TOEIC",
+            done: false
+        },
         experiences: [experiences.cdiscount]
     },
     2020: {
-        degree: "Epsi, Titre RNCP Niveau I",
+        degree: {
+            info: "Epsi, Titre RNCP Niveau I",
+            done: false
+        },
         experiences: [experiences.cdiscount]
     },
     2022: {
-        degree: "Master Mathématiques et applications"
+        degree: {
+            info: "Master Mathématiques et applications",
+            done: false
+        }
     },
     2025: {
-        degree: "Doctorat..."
+        degree: {
+            info: "Doctorat...",
+            done: false
+        }
     }
 };
 
@@ -48,7 +69,12 @@ const histories = {
 
         if (histories[year].degree !== undefined) {
             newBody += '<div class="history-sub row">';
-            newBody += '<h5 class="no-margin history-content ten columns sub">' + histories[year].degree + '</h5>';
+            if (histories[year].degree.done)
+                newBody += '<h5 class="no-margin history-content ten columns sub degree-done">' +
+                    histories[year].degree.info + '</h5>';
+            else
+                newBody += '<h5 class="no-margin history-content ten columns sub degree-not-done">' +
+                    histories[year].degree.info + '</h5>';
             newBody += '<h5 class="no-margin history-info sub">Diplômes</h5>';
             newBody += '</div>';
         }

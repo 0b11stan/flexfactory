@@ -111,3 +111,12 @@ body {
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+.degree-done {
+    background: #E5E5E5;
+}
+
+.degree-not-done {
+    background: #AFAFAF;
+    color: #888888;
+}
