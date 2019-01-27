@@ -2,11 +2,13 @@ body {
     color: #333333;
 }
 
-h2 {
-    text-align: center;
+.no-margin {
+    margin: 0;
 }
 
-.boldify { font-weight: bold; }
+.boldify {
+    font-weight: bold;
+}
 
 .infos {
     font-family: "Lucida Console", Monaco, monospace;
@@ -75,13 +77,38 @@ h2 {
     border-radius: 10px;
     text-decoration: none;
     margin-top: 2rem;
-    /*font-size: 2rem;*/
     font-family: sans-serif;
     cursor: pointer;
 }
 
 .history-content {
+    background: #E5E5E5;
+    border-right-color: #7F7F7F;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.history-sub {
+    margin: 3rem;
+    color: #333333;
+    border-radius: 10px;
+}
+
+.history-sub > .sub {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 3rem 0;
     text-align: center;
-    /*font-size: 2rem;*/
-    padding: 3rem;
+}
+
+.history-info {
+    border-color: #7F7F7F;
+    border-width: 3px;
+    text-align: center;
+    background: #404040;
+    color: #E5E5E5;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }

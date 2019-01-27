@@ -44,7 +44,19 @@ const histories = {
     for (let year in histories) {
         let newMenu = '<h5 id="history-menu-' + year + '" class="history-menu one column">' + year + '</h5>';
         document.getElementById('history-menu').innerHTML += newMenu;
-        let newBody = '<div hidden class="history-content" id="degree-' + year + '"><h5>' + histories[year].degree + '</h5></div>';
+
+        let newBody = `
+            <div hidden id="degree-` + year + `">
+                <div class="history-sub row">
+                    <h5 class="no-margin history-content ten columns sub">` + histories[year].degree + `</h5>
+                    <h5 class="no-margin history-info sub">Diplômes</h5>
+                </div>
+                <div class="history-sub row">
+                    <h5 class="no-margin history-content ten columns sub">` + histories[year].experiences + `</h5>
+                    <h5 class="no-margin history-info sub">Experiences</h5>
+                </div>
+            </div>`;
+
         document.getElementById('history-body').innerHTML += newBody;
     }
     document.getElementById('history-menu-2015').classList.add('offset-by-two');
@@ -57,7 +69,9 @@ const histories = {
                 currentHistory = year;
 
                 document.getElementById("history-menu-" + previousHistory).classList.remove('boldify');
-                document.getElementById("degree-" + previousHistory).setAttribute('hidden', 'hidden');
+                document
+                    .getElementById("degree-" + previousHistory)
+                    .setAttribute('hidden', 'hidden');
 
                 document.getElementById("history-menu-" + year).classList.add('boldify');
                 document.getElementById("degree-" + year).removeAttribute('hidden');
