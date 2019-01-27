@@ -40,22 +40,9 @@ const histories = {
 };
 
 (function () {
-    // TODO : phrase par defaut
     for (let year in histories) {
         let newMenu = '<h5 id="history-menu-' + year + '" class="history-menu one column">' + year + '</h5>';
         document.getElementById('history-menu').innerHTML += newMenu;
-
-        // let knewBody = `
-        //     <div hidden id="degree-` + year + `">
-        //         <div class="history-sub row">
-        //             <h5 class="no-margin history-content ten columns sub">` + histories[year].degree + `</h5>
-        //             <h5 class="no-margin history-info sub">Diplômes</h5>
-        //         </div>
-        //         <div class="history-sub row">
-        //             <h5 class="no-margin history-content ten columns sub">` + histories[year].experiences + `</h5>
-        //             <h5 class="no-margin history-info sub">Experiences</h5>
-        //         </div>
-        //     </div>`;
 
         let newBody = '<div hidden id="degree-' + year + '">';
 
