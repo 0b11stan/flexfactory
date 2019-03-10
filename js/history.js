@@ -1,7 +1,7 @@
 let previousHistory = '2015';
 let currentHistory = '2015';
 
-experiences = {
+let experiences = {
     psi: "Stage développement full stack à PSI informatique",
     touton: "Stage développement full stack à Touton",
     helloasso: "Alternance à Helloasso",
@@ -60,7 +60,7 @@ const histories = {
     }
 };
 
-(function () {
+export default function setHistory() {
     for (let year in histories) {
         let newMenu = '<h5 id="history-menu-' + year + '" class="history-menu one column">' + year + '</h5>';
         document.getElementById('history-menu').innerHTML += newMenu;
@@ -108,4 +108,4 @@ const histories = {
                 document.getElementById("history-menu-" + year).classList.add('boldify');
                 document.getElementById("degree-" + year).removeAttribute('hidden');
             });
-})();
+}

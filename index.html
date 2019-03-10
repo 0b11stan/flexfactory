@@ -16,10 +16,17 @@
     <link rel="stylesheet" href="css/main.css">
     <!--TODO: ajouter favicon-->
     <!--<link rel="icon" type="image/png" href="images/favicon.png">-->
+
 </head>
 <body>
 
-<div class="container">
+<div id="main-mobile" class="container" hidden>
+    <br>
+    <h4>Sorry, this website is not suitable for your device.</h4>
+    <p>Either you are a mobile user or your computer screen is way too small !</p>
+</div>
+
+<div id="main-computer" class="container" hidden>
     <div class="row">
         <!--TODO: ajouter xmpp et clé publique autre part-->
         <!--<a class="fa fa-key two columns" href="tristan-pinaudeau.pub"></a>-->
@@ -64,22 +71,35 @@
     <!--<h4>Articles</h4>-->
     <!--<p>...</p>-->
     <!--</div>-->
+
 </div>
 
-<script src="js/history.js"></script>
-<script>
-    window.setInterval(function () {
-        console.log('add');
-        document.getElementById('title-cursor').innerHTML = '_';
-    }, 2000);
+<script type="module">
+    import setHistory from "./js/history.js";
 
-    window.setTimeout(function () {
+    function runCursor() {
         window.setInterval(function () {
-            console.log('remove');
-            document.getElementById('title-cursor').innerHTML = '';
+            document.getElementById('title-cursor').innerHTML = '_';
         }, 2000);
-    }, 1000);
+        window.setTimeout(function () {
+            window.setInterval(function () {
+                document.getElementById('title-cursor').innerHTML = '';
+            }, 2000);
+        }, 1000);
+    }
 
+    function enableComputerUsage() {
+        document.getElementById("main-computer").hidden = false;
+        setHistory();
+        runCursor();
+    }
+
+    function enableMobileUsage() {
+        document.getElementById("main-mobile").hidden = false;
+    }
+
+    if (window.innerWidth <= 800 && window.innerHeight <= 600) enableMobileUsage();
+    else enableComputerUsage();
 </script>
 
 </body>
