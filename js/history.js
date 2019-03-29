@@ -61,51 +61,59 @@ const histories = {
 };
 
 export default function setHistory() {
-    for (let year in histories) {
-        let newMenu = '<h5 id="history-menu-' + year + '" class="history-menu one column">' + year + '</h5>';
-        document.getElementById('history-menu').innerHTML += newMenu;
+    for (let year in histories) buildHistory(year);
+    for (let year in histories) document.getElementById("history-menu-" + year)
+        .addEventListener('mouseover', function () {
+            displayHistory(year)
+        });
 
-        let newBody = '<div hidden id="degree-' + year + '">';
-
-        if (histories[year].degree !== undefined) {
-            newBody += '<div class="history-sub row">';
-            if (histories[year].degree.done)
-                newBody += '<h5 class="no-margin history-content ten columns sub degree-done">' +
-                    histories[year].degree.info + '</h5>';
-            else
-                newBody += '<h5 class="no-margin history-content ten columns sub degree-not-done">' +
-                    histories[year].degree.info + '</h5>';
-            newBody += '<h5 class="no-margin history-info sub">Diplômes</h5>';
-            newBody += '</div>';
-        }
-
-        if (histories[year].experiences !== undefined) {
-            newBody += '<div class="history-sub row">';
-            newBody += '<h5 class="no-margin history-content ten columns sub">' +
-                histories[year].experiences.join(" | ") + '</h5>';
-            newBody += '<h5 class="no-margin history-info sub">Experiences</h5>';
-            newBody += '</div>';
-        }
-
-        newBody += '</div>';
-
-        document.getElementById('history-body').innerHTML += newBody;
-    }
     document.getElementById('history-menu-2015').classList.add('offset-by-two');
+    document.getElementById('history').addEventListener('mouseleave', function () {
+        hideHistory();
+    });
+}
 
-    for (let year in histories)
-        document
-            .getElementById("history-menu-" + year)
-            .addEventListener('mouseover', function () {
-                previousHistory = currentHistory;
-                currentHistory = year;
+function buildHistory(year) {
+    let newMenu = '<h5 id="history-menu-' + year + '" class="history-menu one column">' + year + '</h5>';
+    document.getElementById('history-menu').innerHTML += newMenu;
 
-                document.getElementById("history-menu-" + previousHistory).classList.remove('boldify');
-                document
-                    .getElementById("degree-" + previousHistory)
-                    .setAttribute('hidden', 'hidden');
+    let newBody = '<div hidden id="degree-' + year + '">';
 
-                document.getElementById("history-menu-" + year).classList.add('boldify');
-                document.getElementById("degree-" + year).removeAttribute('hidden');
-            });
+    if (histories[year].degree !== undefined) {
+        newBody += '<div class="history-sub row">';
+        if (histories[year].degree.done)
+            newBody += '<h5 class="no-margin history-content ten columns sub degree-done">' +
+                histories[year].degree.info + '</h5>';
+        else
+            newBody += '<h5 class="no-margin history-content ten columns sub degree-not-done">' +
+                histories[year].degree.info + '</h5>';
+        newBody += '<h5 class="no-margin history-info sub">Diplômes</h5>';
+        newBody += '</div>';
+    }
+
+    if (histories[year].experiences !== undefined) {
+        newBody += '<div class="history-sub row">';
+        newBody += '<h5 class="no-margin history-content ten columns sub">' +
+            histories[year].experiences.join(" | ") + '</h5>';
+        newBody += '<h5 class="no-margin history-info sub">Experiences</h5>';
+        newBody += '</div>';
+    }
+
+    newBody += '</div>';
+
+    document.getElementById('history-body').innerHTML += newBody;
+}
+
+function hideHistory() {
+    document.getElementById("history-body").hidden = true;
+}
+
+function displayHistory(year) {
+    document.getElementById("history-body").hidden = false;
+    previousHistory = currentHistory;
+    currentHistory = year;
+    document.getElementById("history-menu-" + previousHistory).classList.remove('boldify');
+    document.getElementById("degree-" + previousHistory).setAttribute('hidden', 'hidden');
+    document.getElementById("history-menu-" + year).classList.add('boldify');
+    document.getElementById("degree-" + year).removeAttribute('hidden');
 }
