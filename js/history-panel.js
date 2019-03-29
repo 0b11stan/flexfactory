@@ -60,7 +60,7 @@ const histories = {
     }
 };
 
-export default function setHistory() {
+export default function initHistory() {
     for (let year in histories) buildHistory(year);
     for (let year in histories) document.getElementById("history-menu-" + year)
         .addEventListener('mouseover', function () {
