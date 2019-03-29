@@ -69,9 +69,10 @@ body {
     background: #333333;
     color: #E5E5E5;
     border-radius: 10px;
+    text-align: center;
 }
 
-.history-menu {
+.panel-menu {
     color: #E5E5E5;
     border-radius: 10px;
     text-decoration: none;
@@ -119,4 +120,9 @@ body {
 .degree-not-done {
     background: #AFAFAF;
     color: #888888;
+}
+
+.disabled {
+    color: #888888;
+    cursor: not-allowed;
 }

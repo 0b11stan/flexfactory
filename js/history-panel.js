@@ -74,7 +74,7 @@ export default function initHistory() {
 }
 
 function buildHistory(year) {
-    let newMenu = '<h5 id="history-menu-' + year + '" class="history-menu one column">' + year + '</h5>';
+    let newMenu = '<h5 id="history-menu-' + year + '" class="panel-menu one column">' + year + '</h5>';
     document.getElementById('history-menu').innerHTML += newMenu;
 
     let newBody = '<div hidden id="degree-' + year + '">';
