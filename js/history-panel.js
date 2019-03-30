@@ -68,7 +68,7 @@ export default function initHistory() {
         });
 
     document.getElementById('history-menu-2015').classList.add('offset-by-two');
-    document.getElementById('history').addEventListener('mouseleave', function () {
+    document.getElementById('history-panel').addEventListener('mouseleave', function () {
         hideHistory();
     });
 }

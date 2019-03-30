@@ -27,6 +27,7 @@
 </div>
 
 <div id="main-computer" class="container" hidden>
+
     <div class="row">
         <!--TODO: ajouter xmpp et clé publique autre part-->
         <!--<a class="fa fa-key two columns" href="tristan-pinaudeau.pub"></a>-->
@@ -39,6 +40,7 @@
            href="https://stackoverflow.com/users/6658275/tristan-pinaudeau"></a>
         <a class="fab fa-facebook-f two columns" href="https://www.facebook.com/tristan.pinaudeau"></a>
     </div>
+
     <div class="row header">
         <div class="eight columns">
             <h1 class="title">$ tristan pinaudeau<span id="title-cursor">_</span></h1>
@@ -56,31 +58,28 @@
             </p>
         </div>
     </div>
-    <div id="history" class="panel">
+
+    <div id="history-panel" class="panel">
         <div id="history-menu" class="row"></div>
         <div id="history-body" class="row"></div>
     </div>
+
     <br>
     <br>
-    <div id="project" class="panel">
-        <div class="row">
+    <div id="content-panel" class="panel">
+        <div id="content-menu" class="row">
             <h4 class="panel-menu disabled one-third column">Projets</h4>
             <h4 class="panel-menu disabled one-third column">Lectures</h4>
             <h4 class="panel-menu disabled one-third column">Articles</h4>
         </div>
+        <div id="content-body"></div>
     </div>
-    <!--<div>-->
-    <!--<h2>Inspirations</h2>-->
-    <!--<h4>Livres</h4>-->
-    <!--<p>...</p>-->
-    <!--<h4>Articles</h4>-->
-    <!--<p>...</p>-->
-    <!--</div>-->
 
 </div>
 
 <script type="module">
     import initHistory from "./js/history-panel.js";
+    import initContent from "./js/content-panel.js";
 
     function runCursor() {
         window.setInterval(function () {
@@ -96,6 +95,7 @@
     function enableComputerUsage() {
         document.getElementById("main-computer").hidden = false;
         initHistory();
+        initContent();
         runCursor();
     }
 
