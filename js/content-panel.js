@@ -7,18 +7,22 @@ export default function initContent() {
 }
 
 function initContentMenu() {
-    document.getElementById('content-projects').addEventListener('mouseover', function () {
+    document.getElementById('projects-menu').addEventListener('mouseover', function () {
         showProjects();
     });
-    document.getElementById('content-readings').addEventListener('mouseover', function () {
+    document.getElementById('readings-menu').addEventListener('mouseover', function () {
         showReadings();
     });
-    document.getElementById('content-articles').addEventListener('mouseover', function () {
+    document.getElementById('articles-menu').addEventListener('mouseover', function () {
         showArticles();
     });
 }
 
 function hideContents() {
+    document.getElementById('projects-menu').classList.remove('boldify');
+    document.getElementById('readings-menu').classList.remove('boldify');
+    document.getElementById('articles-menu').classList.remove('boldify');
+
     document.getElementById('projects-body').hidden = true;
     document.getElementById('readings-body').hidden = true;
     document.getElementById('articles-body').hidden = true;
@@ -26,16 +30,19 @@ function hideContents() {
 
 function showProjects() {
     hideContents();
+    document.getElementById("projects-menu").classList.add('boldify');
     document.getElementById('projects-body').hidden = false;
 }
 
 function showReadings() {
     hideContents();
+    document.getElementById('readings-menu').classList.add('boldify');
     document.getElementById('readings-body').hidden = false;
 }
 
 function showArticles() {
     hideContents();
+    document.getElementById("articles-menu").classList.add('boldify');
     document.getElementById('articles-body').hidden = false;
 }
 
