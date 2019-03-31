@@ -7,11 +7,14 @@ export default function initContent() {
 }
 
 function initContentMenu() {
-    ['projects', 'readings', 'articles'].forEach((content) => {
-        document.getElementById(content + '-menu').addEventListener('mouseover', function () {
-            show(content);
-        });
+    document.getElementById('projects-menu').addEventListener('mouseover', () => {
+        show('projects');
     });
+    // ['projects', 'readings', 'articles'].forEach((content) => {
+    //     document.getElementById(content + '-menu').addEventListener('mouseover', function () {
+    //         show(content);
+    //     });
+    // });
 }
 
 function hideContents() {
