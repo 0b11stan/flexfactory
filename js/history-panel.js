@@ -1,64 +1,7 @@
+import {histories} from './history-data.js';
+
 let previousHistory = '2015';
 let currentHistory = '2015';
-
-let experiences = {
-    psi: "Stage développement full stack à PSI informatique",
-    touton: "Stage développement full stack à Touton",
-    helloasso: "Alternance à Helloasso",
-    cdiscount: "Alternance à Cdiscount"
-};
-
-const histories = {
-    2015: {
-        degree: {
-            info: "Bac S option ISN (Informatique et Science du Numérique)",
-            done: true
-        }
-    },
-    2016: {
-        experiences: [experiences.psi]
-    },
-    2017: {
-        degree: {
-            info: "BTS SIO option SLAM spé Mathématiques",
-            done: true
-        },
-        experiences: [experiences.touton, experiences.helloasso]
-    },
-    2018: {
-        degree: {
-            info: "Epsi, Titre RNCP Niveau II (DIRRECT)",
-            done: true
-        },
-        experiences: [experiences.helloasso, experiences.cdiscount]
-    },
-    2019: {
-        degree: {
-            info: "Examen du TOEIC",
-            done: false
-        },
-        experiences: [experiences.cdiscount]
-    },
-    2020: {
-        degree: {
-            info: "Epsi, Titre RNCP Niveau I",
-            done: false
-        },
-        experiences: [experiences.cdiscount]
-    },
-    2022: {
-        degree: {
-            info: "Master Mathématiques et applications",
-            done: false
-        }
-    },
-    2025: {
-        degree: {
-            info: "Doctorat...",
-            done: false
-        }
-    }
-};
 
 export default function initHistory() {
     for (let year in histories) buildHistory(year);
@@ -104,7 +47,13 @@ function buildHistory(year) {
     document.getElementById('history-body').innerHTML += newBody;
 }
 
+function unboldifyMenu() {
+    for (let year in histories)
+        document.getElementById('history-menu-' + year).classList.remove('boldify');
+}
+
 function hideHistory() {
+    unboldifyMenu();
     document.getElementById("history-body").hidden = true;
 }
 
@@ -112,8 +61,8 @@ function displayHistory(year) {
     document.getElementById("history-body").hidden = false;
     previousHistory = currentHistory;
     currentHistory = year;
-    document.getElementById("history-menu-" + previousHistory).classList.remove('boldify');
-    document.getElementById("degree-" + previousHistory).setAttribute('hidden', 'hidden');
+    unboldifyMenu();
+    document.getElementById("degree-" + previousHistory).hidden = true;
     document.getElementById("history-menu-" + year).classList.add('boldify');
-    document.getElementById("degree-" + year).removeAttribute('hidden');
+    document.getElementById("degree-" + year).hidden = false;
 }
