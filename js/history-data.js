@@ -32,7 +32,7 @@ export const histories = {
     2019: {
         degree: {
             info: "Examen du TOEIC",
-            done: false
+            done: true
         },
         experiences: [experiences.cdiscount]
     },
