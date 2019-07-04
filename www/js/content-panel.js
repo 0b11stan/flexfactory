@@ -8,7 +8,7 @@ export default function initContent() {
 
 function initContentMenu() {
     document.getElementById('projects-menu').addEventListener('mouseover', () => {
-        show('projects');
+        //show('projects');
     });
     // ['projects', 'readings', 'articles'].forEach((content) => {
     //     document.getElementById(content + '-menu').addEventListener('mouseover', function () {
