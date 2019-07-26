@@ -45,7 +45,7 @@ export const histories = {
     },
     2022: {
         degree: {
-            info: "Master Mathématiques et applications",
+            info: "Master...",
             done: false
         }
     },
