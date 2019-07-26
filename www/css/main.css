@@ -126,3 +126,25 @@ body {
     color: #888888;
     cursor: not-allowed;
 }
+
+#content-body {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+}
+
+.book-panel {
+    text-align: left;
+    margin: 2.5rem;
+    padding: 1rem;
+    background-color: #E5E5E5;
+    border-radius: 10px;
+    color: #333333;
+}
+
+.book-pic {
+    margin: 1rem;
+    border-radius: 10px;
+    /*border-style: solid;
+    border-width: 5px;
+    border-color: #333333;*/
+}
