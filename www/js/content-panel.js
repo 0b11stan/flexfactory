@@ -1,6 +1,8 @@
+import {books} from './content-data.js';
+
 export default function initContent() {
     initContentMenu();
-    // TODO : appel à buildContentBody pour charger le corps depuis un json plutôt qu'avec des répétitions
+    buildContentBody();
     document.getElementById('content-panel').addEventListener('mouseleave', function () {
         hideContents();
     });
@@ -28,20 +30,33 @@ function show(content) {
 }
 
 function buildContentBody() {
-    let contentBody = document.getElementById('content-body');
-    buildProjectBody(contentBody);
-    buildReadingsBody(contentBody);
-    buildArticlesBody(contentBody);
+    buildProjectBody();
+    buildReadingsBody();
+    buildArticlesBody();
 }
 
-function buildProjectBody(contentBody) {
-    contentBody.innerHTML += '<div id="projects-body" hidden><p>Hello Projects !</p><br></div>';
+function buildProjectBody() {
+    //contentBody.innerHTML += '<div id="projects-body" hidden><p>Hello Projects !</p><br></div>';
 }
 
-function buildReadingsBody(contentBody) {
-    contentBody.innerHTML += '<div id="readings-body" hidden><p>Hello Readings !</p><br></div>';
+function buildReadingsBody() {
+    let readingBody = document.getElementById('readings-body');
+    for (let book in books) {
+        book = books[book];
+        readingBody.innerHTML += `
+        <div class="book-panel row">
+            <div class="eight columns">
+                <h4 style="font-family: sans-serif;" class="book-title">` + book.title + `</h4>
+                <h5 class="book-author">` + book.author + `</h5>
+                <p>` + book.commentary + `</p>
+            </div>
+            <div class="four columns">
+                <img class="book-pic" src="` + book.picture + `" width="200">
+            </div>
+        </div>`
+    }
 }
 
-function buildArticlesBody(contentBody) {
-    contentBody.innerHTML += '<div id="articles-body" hidden><p>Hello Articles !</p><br></div>';
+function buildArticlesBody() {
+    //contentBody.innerHTML += '<div id="articles-body" hidden><p>Hello Articles !</p><br></div>';
 }
