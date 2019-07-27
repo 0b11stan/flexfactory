@@ -1,4 +1,5 @@
 body {
+    overflow-y: overlay;
     color: #333333;
 }
 
