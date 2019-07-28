@@ -28,14 +28,16 @@ body {
     font-weight: bolder;
 }
 
-.links>.fa, .links>.fab, .links>.fa:hover, .links>.fab:hover {
+
+
+.links, .links:hover {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     text-align: center;
     text-decoration: none;
 }
 
-.fa, .fab {
+.links {
     padding: 1rem;
     font-size: 2rem;
     margin-bottom: 6rem;
@@ -43,7 +45,7 @@ body {
     color: #333333;
 }
 
-.links>.fa:hover, .links>.fab:hover {
+.links:hover {
     padding: 2rem;
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -130,7 +132,7 @@ body {
     padding-bottom: 1rem;
 }
 
-.book-panel, .project-panel {
+.content-panel {
     text-align: left;
     margin: 2.5rem;
     padding: 1rem;
@@ -147,4 +149,15 @@ body {
     border-color: #333333;*/
 }
 
-.project-git-link { font-size: 4rem; margin-bottom: 0; }
+.project-git-link {
+    font-size: 4rem; 
+    margin-bottom: 0;
+    text-align: center;
+    text-decoration: none;
+    color: #333333;
+}
+
+.project-git-link:hover {
+    text-decoration: none;
+    color: #333333;
+}

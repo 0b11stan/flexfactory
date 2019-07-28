@@ -47,13 +47,13 @@ function buildProjectBody() {
         }
 
         projectsBody.innerHTML += `
-        <div class="project-panel">
+        <div class="content-panel">
             <div class="row">
                 <div class="ten columns">
                     <h4 style="font-family: sans-serif;" class="project-title">` + project.title + `</h4>
                 </div>
                 <div class="rightify two columns">
-                    <a class="project-git-link fab fa-github-square" href="` + project.github + `"></a>
+                    <a class="project-git-link fab fa-github-square" target="blank" href="` + project.github + `"></a>
                 </div>
             </div>
             <div class="row">
@@ -73,7 +73,7 @@ function buildReadingsBody() {
     for (let book in books) {
         book = books[book];
         readingBody.innerHTML += `
-        <div class="book-panel row">
+        <div class="content-panel row">
             <div class="eight columns">
                 <h4 style="font-family: sans-serif;" class="book-title">` + book.title + `</h4>
                 <h5 class="book-author">` + book.author + `</h5>
