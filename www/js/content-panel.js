@@ -1,4 +1,4 @@
-import {books} from './content-data.js';
+import {books, projects} from './content-data.js';
 
 export default function initContent() {
     initContentMenu();
@@ -9,7 +9,7 @@ export default function initContent() {
 }
 
 function initContentMenu() {
-    [/*'projects', */'readings'/*, 'articles'*/].forEach((content) => {
+    ['projects', 'readings'/*, 'articles'*/].forEach((content) => {
          document.getElementById(content + '-menu').addEventListener('mouseover', function () {
              show(content);
          });
@@ -36,7 +36,36 @@ function buildContentBody() {
 }
 
 function buildProjectBody() {
-    //contentBody.innerHTML += '<div id="projects-body" hidden><p>Hello Projects !</p><br></div>';
+    let projectsBody = document.getElementById('projects-body');
+
+    for (let project in projects) {
+        project = projects[project];
+
+        let picturesBody = '';
+        for (let pic in project.pictures) {
+            picturesBody += '<img class="content-pic" src="img/' + project.pictures[pic] + '" width="200">';
+        }
+
+        projectsBody.innerHTML += `
+        <div class="project-panel">
+            <div class="row">
+                <div class="ten columns">
+                    <h4 style="font-family: sans-serif;" class="project-title">` + project.title + `</h4>
+                </div>
+                <div class="rightify two columns">
+                    <a class="project-git-link fab fa-github-square" href="` + project.github + `"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="eight columns">
+                    <p class="justify">` + project.presentation + `</p>
+                </div>
+                <div class="four columns">`
+                    + picturesBody +
+                `</div>
+            </div>
+        </div>`;
+    }
 }
 
 function buildReadingsBody() {
@@ -48,10 +77,10 @@ function buildReadingsBody() {
             <div class="eight columns">
                 <h4 style="font-family: sans-serif;" class="book-title">` + book.title + `</h4>
                 <h5 class="book-author">` + book.author + `</h5>
-                <p>` + book.commentary + `</p>
+                <p class="justify">` + book.commentary + `</p>
             </div>
-            <div class="four columns">
-                <img class="book-pic" src="` + book.picture + `" width="200">
+            <div class="">
+                <img class="content-pic" src="` + book.picture + `" width="200">
             </div>
         </div>`
     }
