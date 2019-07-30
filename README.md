@@ -3,8 +3,8 @@ My portfolio website hosted on https://flexfactory.fr
 
 ## Roadmap
 
-- [ ] Create tiles Projects
-- [ ] Write first project tiles
+- [x] Create tiles Projects
+- [x] Write first project tiles
 - [x] Create tiles Readings
 - [ ] Write first readings tiles
 - [ ] Create tiles Articles
