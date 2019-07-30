@@ -58,7 +58,7 @@ function buildProjectBody() {
             </div>
             <div class="row">
                 <div class="eight columns">
-                    <p class="justify">` + project.presentation + `</p>
+                    <p>` + project.presentation + `</p>
                 </div>
                 <div class="four columns">`
                     + picturesBody +
@@ -77,7 +77,7 @@ function buildReadingsBody() {
             <div class="eight columns">
                 <h4 style="font-family: sans-serif;" class="book-title">` + book.title + `</h4>
                 <h5 class="book-author">` + book.author + `</h5>
-                <p class="justify">` + book.commentary + `</p>
+                <p>` + book.commentary + `</p>
             </div>
             <div class="">
                 <img class="content-pic" src="` + book.picture + `" width="200">

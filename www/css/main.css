@@ -3,8 +3,11 @@ body {
     color: #333333;
 }
 
+#content-body p {
+    text-align: justify;
+}
+
 .rightify   { text-align: right; }
-.justify    { text-align: justify }
 .no-margin  { margin: 0; }
 .boldify    { font-weight: bold; }
 
