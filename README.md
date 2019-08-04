@@ -9,6 +9,8 @@ My portfolio website hosted on https://flexfactory.fr
 - [ ] Create tictactoe tile
 - [ ] Comment tictactoe project
 - [ ] Comment 1984 Book
+- [ ] Create pon-client tile
+- [ ] Comment pon-client project
 - [ ] Optimize book pictures
 - [ ] Create tiles Articles
 - [ ] Create blog pages
