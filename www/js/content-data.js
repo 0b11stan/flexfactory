@@ -61,7 +61,18 @@ export const projects = [
     {
         title: "Tictactoes",
         subjects: ['best-practices', 'learning', 'python', 'rust', 'c'],
-        presentation: ``,
+        presentation: `
+        <p>Ce projet que vous retrouverez découpé en plusieurs dépôts git est extrêmement simpliste mais il est une bonne représentation de mon processus d'apprentissage et de mes intérets technologiques en terme de languages.</p>
+        <p>Lorsqu'un language m'intéresse, après avoir finit le tutoriel officiel, je commence toujours par un projet de toute petite envergure pour mieux comprendre par moi même les bases du language et manipuler sa syntaxe sans le cadre rigoureu d'un tutoriel. Dernierement, j'ai décidé de me concentrer sur le jeu du morpion pour ces tests. Il permet de manipuler des problématiques variés comme les input utilisateur, l'affichage formaté et la gestion d'une base de règles.</p>
+        <p>J'essaie de réaliser le dévellopement en trois ou quatres phases pour faire un tour rapide du language:<p>
+        <ul>
+            <li>Obtenir un morpion jouable (MVP).</li>
+            <li>Diviser l'IHM du code fonctionnel à travers des interfaces généralistes.</li>
+            <li>Ecrire des tests (au moins pour le code fonctionnel).</li>
+            <li>Ecrire une interface graphique.</li>
+        </ul>
+        <p>Naturellement, ces mini projets me servent aussi de tests lorsque je veux essayer une nouvelle feature du language par exemple.</p>
+        `,
         github: "https://github.com/TristanPinaudeau?utf8=✓&tab=repositories&q=tictactoe&type=&language=",
         pictures: ['tictactoe_start.png', 'tictactoe_end.png']
     }
