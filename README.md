@@ -6,12 +6,13 @@ My portfolio website hosted on https://flexfactory.fr
 - [x] Create tiles Projects
 - [x] Comment flexfactory project
 - [x] Create tiles Readings
-- [ ] Create tictactoe tile
-- [ ] Comment tictactoe project
+- [x] Create tictactoe tile
+- [x] Comment tictactoe project
 - [ ] Comment 1984 Book
 - [ ] Create pon-client tile
 - [ ] Comment pon-client project
-- [ ] Optimize book pictures
+- [x] Optimize book pictures
+- [ ] Optimize font loading
 - [ ] Create tiles Articles
 - [ ] Create blog pages
 - [ ] Write first blog post
