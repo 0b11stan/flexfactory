@@ -2,32 +2,38 @@ export const books = [
     {
         title: "1984",
         author: "George Orwell",
-        commentary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        commentary: "incoming...",
         picture: "img/1984.jpg"
     },
     {
         title: "La formule du Savoir",
         author: "Lê Nguyen Hoang",
-        commentary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        commentary: "incoming...",
         picture: "img/la_formule_du_savoir.jpg"
     },
     {
         title: "Méditations métaphysiques",
         author: "René Descartes",
-        commentary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        commentary: "incoming...",
         picture: "img/meditations_metaphysiques.jpg"
     },
     {
         title: "L'inconditionnel",
-        author: "...",
-        commentary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        author: "www.revenudebase.info",
+        commentary: "incoming...",
         picture: "img/l_inconditionnel.jpg"
     },
     {
         title: "La pensée radicale",
-        author: "...",
-        commentary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        author: "Jean Baudrillard",
+        commentary: "incoming...",
         picture: "img/la_pensee_radicale.jpg"
+    },
+    {
+        title: "Patients",
+        author: "Grand Corps Malade",
+        commentary: "incoming...",
+        picture: "img/novisuel.png"
     }
 ]
 
