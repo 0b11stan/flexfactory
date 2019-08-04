@@ -46,6 +46,11 @@ function buildProjectBody() {
             picturesBody += '<img class="content-pic" src="img/' + project.pictures[pic] + '" width="200">';
         }
 
+        let subjectBody = '';
+        for (let subject in project.subjects) {
+            subjectBody += '<span class="subject">' + project.subjects[subject] + '</span>';
+        }
+
         projectsBody.innerHTML += `
         <div class="content-panel">
             <div class="row">
@@ -55,6 +60,9 @@ function buildProjectBody() {
                 <div class="rightify two columns">
                     <a class="project-git-link fab fa-github-square" target="blank" href="` + project.github + `"></a>
                 </div>
+            </div>
+            <div class="row">
+                <div class="twelve columns">` + subjectBody + `</div>
             </div>
             <div class="row">
                 <div class="eight columns">

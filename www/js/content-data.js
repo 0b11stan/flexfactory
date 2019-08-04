@@ -34,6 +34,7 @@ export const books = [
 export const projects = [
     {
         title: "FlexFactory.Fr",
+        subjects: ['html', 'css', 'js', 'perf', 'raw'],
         presentation: `
         <p>Vous parcourez actuellement ce projet. Le site flexfactory.fr se veut être d'avantage une vitrine de ma personnalité qu'un CV interactif. Vous y trouverez un rapide historique de mes différentes formations et experiences professionnelles. De plus, trois onglets vous donnent un aperçu de ce qui attire mon intêret au quotidien:</p>
         <ul>
