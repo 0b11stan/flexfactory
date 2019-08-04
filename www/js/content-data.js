@@ -57,6 +57,13 @@ export const projects = [
         `,
         github: "https://github.com/TristanPinaudeau/FlexFactory",
         pictures: ["flexfactory.png", "ff-readings.png"]
+    },
+    {
+        title: "Tictactoes",
+        subjects: ['best-practices', 'learning', 'python', 'rust', 'c'],
+        presentation: ``,
+        github: "https://github.com/TristanPinaudeau?utf8=✓&tab=repositories&q=tictactoe&type=&language=",
+        pictures: ['tictactoe_start.png', 'tictactoe_end.png']
     }
 ]
 
