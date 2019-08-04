@@ -79,7 +79,7 @@ function buildReadingsBody() {
                 <h5 class="book-author">` + book.author + `</h5>
                 <p>` + book.commentary + `</p>
             </div>
-            <div class="">
+            <div class="four columns">
                 <img class="content-pic" src="` + book.picture + `" width="200">
             </div>
         </div>`
