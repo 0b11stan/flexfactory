@@ -2,7 +2,16 @@ export const books = [
     {
         title: "1984",
         author: "George Orwell",
-        commentary: `incoming...`,
+        commentary: `
+        <p>Voilà un classique de la science fiction dystopique.</p>
+        <p>Ce roman raconte l'histoire de Winston Smith, un habitant de l'occidant du futur, dans un monde où les régimes dictatoriaux des années 30 ont atteint leur paroxysme. George Orwell nous fait entrevoir sa vision de la dictature "parfaite". Un régime devenu structurellement indétronable.</p>
+        <p>J'ai beaucoup apprécié cette lecture et je pense que ce livre mérite d'être lu pour un grand nombre raison.</p>
+        <p>L'une d'elles est liée à l'écriture très riche et pourtant si limpide d'Orwell que j'ai découverte à travers cet ouvrage. Une véritable leçon de vocabulaire anglais.</p>
+        <p>La deuxième est historique. Si vous doutez de l'existance possible d'une dictature totale et parfaite et des raisons qui pourraient lui faire voir le jour, G.O. vous apporte ici des éléments de réponse, de quoi faire réfléchir...</p>
+        <p>Ensuite, c'est l'intêret d'un amateur de science-fiction qui vous poussera sûrement à lire ce livre. La vision qu'à G.O. du futur et ses différentes prédictions technologiques sont d'une impressionante précision; surtout lorsque l'on s'intéresse à la date de parution de l'oeuvre : 1949!</p>
+        <p>Enfin, si ces dernières lignes ne vous ont toujours pas décidé à lire le livre, je finirais par évoquer le fort intéret philosophique de cette lecture. G.O. nous met à la place d'un personage constamment tiraillé par une multitude de questions morales tout au long du livre. Il est alors très intéressant d'analyser nos propres choix moraux dans des situations similaires.</p>
+        <p>Je finirais par évoquer mon passage préféré du livre qui, sur mon édition, se trouve à la page 184. Celui-ci à pour titre 'THE THEORY AND PRACTICE OF OLIGARCHICAL COLLECTIVISM'. Les quelques pages qui suivent sont une formidable leçon de géopolitique et de philosophie des idéologies. Entre ces lignes se dévoile un monde à la fois si loin du nôtre par son manque d'humanité mais à la fois tellement proche de part sa structure et son évolution qu'il est difficile pour le lecteur de ne pas en être troublé. Lors de cette lecture, il vous sera nécessaire de relever la tête quelques instants, simplement pour vérifier que le monde qui vous entoure n'est pas entrain de sombrer dans un chaos technologique.</p>
+        `,
         picture: "img/1984.jpg"
     },
     {
@@ -77,9 +86,3 @@ export const projects = [
         pictures: ['tictactoe_start.png', 'tictactoe_end.png']
     }
 ]
-/*
-<p>Amateur de philosophie, de science fiction et des problématiques liés à la protection des données personnelles, ce classique de la litterature moderne m'avait été recomandé à de nombreuses reprises. Je me suis très vite rendu compte que cet ouvrage mértait tous les compliments qui lui étaient destinés. Plus encore, je trouve que cette dystopie mérite une meilleure visibilité, notamment auprès d'un public jeune.</p>
-<p>J'ai décidé de lire ce livre dans sa langue d'origine (l'anglais) comme on me l'a si sagement conseillé. Malgrès cela, la facilité de lecture m'a beaucoup impressionné. Je ne maitrisais bien-entendu pas tous les mots et la présence d'un pseudo language inventé par l'auteur ne facilitais pas la tâche, mais je recommandrais moi aussi la lecture de cette oeuvre en anglais tant le choix des mots et l'importance du vocabulaire influence l'imertion du lecteur dans cette dystopie.</p>
-<p>Mon passage préféré du livre, pour n'en nommer qu'un, se trouve page 184 (dans mon édition) et est nommé 'THE THEORY AND PRACTICE OF OLIGARCHICAL COLLECTIVISM'. Les quelques pages qui suivent sont une formidable leçon de géopolitique et philosophie des idéologies. Dans ces quelques pages, se dévoile un monde à la fois si loin du notre dans son manque d'humanité mais aussi si proche de part sa structure et son évolution qu'il est difficile pour le lecteur de ne pas être troublé. Lors de cette lecture, il vous sera nécessaire de relever la tête quelques instants, simplement pour vérifier que le monde qui vous entoure n'est pas entrain de sombrer dans un chaos technologique. Parfois, en relevant la tête, vous pourriez bien constatez que ce chaos technologique est entrain de s'installer, sous une forme différente mais analogue à celle du livre.</p>
-<p>Quoi qu'il en soit, je recommande cette lecture pour toute personne intéressé de près ou de loin par la politique, la science-fiction dystopique ou les problématiques liés à la protection des informations personnels.</p>
-*/
