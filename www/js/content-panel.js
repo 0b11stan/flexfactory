@@ -43,7 +43,9 @@ function buildProjectBody() {
 
         let picturesBody = '';
         for (let pic in project.pictures) {
+            picturesBody += '<a href="img/' + project.pictures[pic] + '" target="blank">'
             picturesBody += '<img class="content-pic" src="img/' + project.pictures[pic] + '" width="200">';
+            picturesBody += '</a>'
         }
 
         let subjectBody = '';
