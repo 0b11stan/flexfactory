@@ -1,4 +1,4 @@
-# portfolio
+# FlexFactory
 My portfolio website hosted on https://flexfactory.fr
 
 ## Roadmap
@@ -8,9 +8,9 @@ My portfolio website hosted on https://flexfactory.fr
 - [x] Create tiles Readings
 - [x] Create tictactoe tile
 - [x] Comment tictactoe project
-- [ ] Comment 1984 Book
-- [ ] Create pon-client tile
-- [ ] Comment pon-client project
+- [x] Comment 1984 Book
+- [x] Create pon-client tile
+- [x] Comment pon-client project
 - [x] Optimize book pictures
 - [ ] Optimize font loading
 - [ ] Create tiles Articles
