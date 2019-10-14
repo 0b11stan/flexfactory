@@ -12,6 +12,7 @@ My portfolio website hosted on https://flexfactory.fr
 - [x] Create pon-client tile
 - [x] Comment pon-client project
 - [x] Optimize book pictures
+- [x] Clear huge files from git history
 - [ ] Optimize font loading
 - [ ] Create tiles Articles
 - [ ] Create blog pages
