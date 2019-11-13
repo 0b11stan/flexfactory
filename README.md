@@ -1,5 +1,13 @@
 # FlexFactory
+
 My portfolio website hosted on https://flexfactory.fr
+
+## Developement
+
+To run the container in devellopement mode:
+```
+$ docker run --name flexfactory -v $PWD/www/:/usr/share/nginx/html:ro --rm -p 8080:80 nginx
+```
 
 ## Roadmap
 
