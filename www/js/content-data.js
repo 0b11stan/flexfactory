@@ -3,8 +3,8 @@ export const books = [
         title: "Le Joueur d'échecs",
         author: "Stefan Zweig",
         commentary: `
-        <p>Je découvre l'existance de Stefan Zweig en lisant la couverture de ce livre qu'un amis me tend. Conseillé par un de nos professeur, il me dis l'avoir fini en peu de temps et que celui-ci va m'intéressé. Il n'avait pas tord.</p>
-        <p>Le Joueur d'échecs est loin d'être le livre le plus connus de Mr Zweig qui, je l'apprend plus tard, est un auteur réputé pour ses textes très introspectifs.<p>`,
+        <p>Je découvre l'existance de Stefan Zweig, un auteur pourtant réputé, en même temps que ce livre qu'il à écrit à la fin de sa vie, peu de temps avant son suicide. C'est sur le conseille d'un professeur et d'un amis que j'ai décidé de lire ce court mais passionnant ouvrage.</p>
+        <p>En effet, c`
         picture: "#"
     },*/
     {
