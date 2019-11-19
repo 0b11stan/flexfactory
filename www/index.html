@@ -93,19 +93,32 @@
         }, 1000);
     }
 
+    let computer = document.getElementById("main-computer");
+    let mobile = document.getElementById("main-mobile");
+
     function enableComputerUsage() {
-        document.getElementById("main-computer").hidden = false;
-        initHistory();
-        initContent();
-        runCursor();
+        if (computer.hidden) {
+            mobile.hidden = true;
+            computer.hidden = false;
+            initHistory();
+            initContent();
+            runCursor();
+        }
     }
 
     function enableMobileUsage() {
-        document.getElementById("main-mobile").hidden = false;
+        computer.hidden = true;
+        mobile.hidden = false;
     }
 
-    if (window.innerWidth <= 800) enableMobileUsage();
-    else enableComputerUsage();
+    function adaptDevices() {
+        if (window.innerWidth <= 1100) enableMobileUsage();
+        else enableComputerUsage();
+    }
+
+    adaptDevices();
+    window.addEventListener('resize', adaptDevices);
+
 </script>
 
 </body>

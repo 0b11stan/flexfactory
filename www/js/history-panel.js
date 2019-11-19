@@ -2,18 +2,22 @@ import {histories} from './history-data.js';
 
 let previousHistory = '2015';
 let currentHistory = '2015';
+let initialized = false;
 
 export default function initHistory() {
-    for (let year in histories) buildHistory(year);
-    for (let year in histories) document.getElementById("history-menu-" + year)
-        .addEventListener('mouseover', function () {
-            displayHistory(year)
-        });
+    if (! initialized) {
+        for (let year in histories) buildHistory(year);
+        for (let year in histories) document.getElementById("history-menu-" + year)
+            .addEventListener('mouseover', function () {
+                displayHistory(year)
+            });
 
-    document.getElementById('history-menu-2015').classList.add('offset-by-two');
-    document.getElementById('history-panel').addEventListener('mouseleave', function () {
-        hideHistory();
-    });
+        document.getElementById('history-menu-2015').classList.add('offset-by-two');
+        document.getElementById('history-panel').addEventListener('mouseleave', function () {
+            hideHistory();
+        });
+        initialized = true;
+    }
 }
 
 function buildHistory(year) {
