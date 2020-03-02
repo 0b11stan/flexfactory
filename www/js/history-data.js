@@ -45,13 +45,7 @@ export const histories = {
     },
     2022: {
         degree: {
-            info: "Master...",
-            done: false
-        }
-    },
-    2025: {
-        degree: {
-            info: "Doctorat...",
+            info: "<strong>. . .</strong>",
             done: false
         }
     }

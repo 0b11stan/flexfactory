@@ -87,7 +87,6 @@ function buildReadingsBody() {
             <div class="eight columns">
                 <h4 style="font-family: sans-serif;" class="book-title">` + book.title + `</h4>
                 <h5 class="book-author">` + book.author + `</h5>
-                <p>` + book.commentary + `</p>
             </div>
             <div class="four columns">
                 <img class="content-pic" src="` + book.picture + `" width="200">

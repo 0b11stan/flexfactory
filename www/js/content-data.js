@@ -1,56 +1,38 @@
 export const books = [
-    /*{
+    {
         title: "Le Joueur d'échecs",
         author: "Stefan Zweig",
-        commentary: `
-        <p>Je découvre l'existance de Stefan Zweig, un auteur pourtant réputé, en même temps que ce livre qu'il à écrit à la fin de sa vie, peu de temps avant son suicide. C'est sur le conseille d'un professeur et d'un amis que j'ai décidé de lire ce court mais passionnant ouvrage.</p>
-        <p>En effet, c`
-        picture: "#"
-    },*/
+        picture: "img/r_le_joueur_decheque.jpg"
+    },
     {
         title: "1984",
         author: "George Orwell",
-        commentary: `
-        <p>Voilà un classique de la science fiction dystopique.</p>
-        <p>Ce roman raconte l'histoire de Winston Smith, un habitant de l'occidant du futur, dans un monde où les régimes dictatoriaux des années 30 ont atteint leur paroxysme. George Orwell nous fait entrevoir sa vision de la dictature "parfaite". Un régime devenu structurellement indétronable.</p>
-        <p>J'ai beaucoup apprécié cette lecture et je pense que ce livre mérite d'être lu pour un grand nombre raison.</p>
-        <p>L'une d'elles est liée à l'écriture très riche et pourtant si limpide d'Orwell que j'ai découverte à travers cet ouvrage. Une véritable leçon de vocabulaire anglais.</p>
-        <p>La deuxième est historique. Si vous doutez de l'existance possible d'une dictature totale et parfaite et des raisons qui pourraient lui faire voir le jour, G.O. vous apporte ici des éléments de réponse, de quoi faire réfléchir...</p>
-        <p>Ensuite, c'est l'intêret d'un amateur de science-fiction qui vous poussera sûrement à lire ce livre. La vision qu'à G.O. du futur et ses différentes prédictions technologiques sont d'une impressionante précision; surtout lorsque l'on s'intéresse à la date de parution de l'oeuvre : 1949!</p>
-        <p>Enfin, si ces dernières lignes ne vous ont toujours pas décidé à lire le livre, je finirais par évoquer le fort intéret philosophique de cette lecture. G.O. nous met à la place d'un personage constamment tiraillé par une multitude de questions morales tout au long du livre. Il est alors très intéressant d'analyser nos propres choix moraux dans des situations similaires.</p>
-        <p>Je finirais par évoquer mon passage préféré du livre qui, sur mon édition, se trouve à la page 184. Celui-ci à pour titre 'THE THEORY AND PRACTICE OF OLIGARCHICAL COLLECTIVISM'. Les quelques pages qui suivent sont une formidable leçon de géopolitique et de philosophie des idéologies. Entre ces lignes se dévoile un monde à la fois si loin du nôtre par son manque d'humanité mais à la fois tellement proche de part sa structure et son évolution qu'il est difficile pour le lecteur de ne pas en être troublé. Lors de cette lecture, il vous sera nécessaire de relever la tête quelques instants, simplement pour vérifier que le monde qui vous entoure n'est pas entrain de sombrer dans un chaos technologique.</p>
-        `,
-        picture: "img/1984.jpg"
+        picture: "img/r_1984.jpg"
     },
     {
         title: "La formule du Savoir",
         author: "Lê Nguyen Hoang",
-        commentary: "incoming...",
-        picture: "img/la_formule_du_savoir.jpg"
+        picture: "img/r_la_formule_du_savoir.jpg"
     },
     {
         title: "Méditations métaphysiques",
         author: "René Descartes",
-        commentary: "incoming...",
-        picture: "img/meditations_metaphysiques.jpg"
+        picture: "img/r_meditations_metaphysiques.jpg"
     },
     {
         title: "L'inconditionnel",
         author: "www.revenudebase.info",
-        commentary: "incoming...",
-        picture: "img/l_inconditionnel.jpg"
+        picture: "img/r_l_inconditionnel.jpg"
     },
     {
         title: "La pensée radicale",
         author: "Jean Baudrillard",
-        commentary: "incoming...",
-        picture: "img/la_pensee_radicale.jpg"
+        picture: "img/r_la_pensee_radicale.jpg"
     },
     {
         title: "Patients",
         author: "Grand Corps Malade",
-        commentary: "incoming...",
-        picture: "img/patients.jpg"
+        picture: "img/r_patients.jpg"
     }
 ]
 
