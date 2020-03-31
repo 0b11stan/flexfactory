@@ -31,7 +31,7 @@ export const histories = {
     },
     2019: {
         degree: {
-            info: "Examen du TOEIC",
+            info: "Examen du TOEIC (960/990)",
             done: true
         },
         experiences: [experiences.cdiscount]
