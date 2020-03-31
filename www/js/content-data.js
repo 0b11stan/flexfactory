@@ -1,5 +1,10 @@
 export const books = [
     {
+        title: "Serious Cryptography",
+        author: "Jean-Philippe Aumasson",
+        picture: "img/r_serious_crypto.jpg"
+    },
+    {
         title: "Le Joueur d'échecs",
         author: "Stefan Zweig",
         picture: "img/r_le_joueur_decheque.jpg"
