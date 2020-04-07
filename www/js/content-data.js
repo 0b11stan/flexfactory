@@ -1,5 +1,10 @@
 export const books = [
     {
+        title: "How to fix social media before it's too late, an early investor on how Facebook lost its way.",
+        author: "Roger McNamee - Tim Cook - Donald Graham - Maria Ressa",
+        picture: "img/r_time_social_medias.jpg"
+    },
+    {
         title: "Serious Cryptography",
         author: "Jean-Philippe Aumasson",
         picture: "img/r_serious_crypto.jpg"
