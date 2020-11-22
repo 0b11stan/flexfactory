@@ -27,10 +27,6 @@ export default function initHistory() {
   }
 }
 
-function buildHistory(year) {
-  // moved to html ...
-}
-
 function unboldifyMenu() {
   histories.map(year => 
     document.getElementById('history-menu-' + year).classList.remove('boldify')
