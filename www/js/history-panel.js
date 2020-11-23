@@ -12,7 +12,6 @@ function histories_from_html() {
 }
 
 export default function initHistory() {
-  console.log(histories);
   if (! initialized) {
     histories.map((year) => document.getElementById("history-menu-" + year)
       .addEventListener('mouseover', function () {

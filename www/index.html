@@ -5,6 +5,7 @@
   <head>
     <meta charset="utf-8">
     <title>> Tristan Pinaudeau_</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A very simple website showing my background, my projects and more.">
     <meta name="author" content="Tristan Pinaudeau">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,20 +16,7 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
   </head>
   <body>
-    <div id="main-mobile" class="container" hidden>
-      <br>
-      <h5>Outch, looks like the mobile version of my website is not yet finished.</h5>
-      <p><strong>However, you can:</strong></p>
-      <ul>
-        <li>check out <a href="/resume" download="tristan-pinaudeau.pdf">my resume</a></li>
-        <li>send me an email at <a href="mailto:tristan@tic.sh">tristan@tic.sh</a></li>
-        <li>join me on <a target="blank" href="https://matrix.org/">matrix</a> at @tristan:tic.sh</li>
-        <li>join me on <a target="blank" href="https://twitter.com/0b11stan">twitter</a> and <a href="https://www.linkedin.com/in/tristan-pinaudeau/">linkedin</a></li>
-        <li>look at my projets on <a target="blank" href="https://github.com/0b11stan">github</a></li>
-      </ul>
-    </div>
-
-    <div id="main-computer" class="container" hidden>
+    <div id="main-computer" class="container">
 
       <div class="row">
         <!--TODO: ajouter xmpp / matrix ?-->
@@ -204,34 +192,13 @@
         }, 1000);
       }
 
-      let computer = document.getElementById("main-computer");
-      let mobile = document.getElementById("main-mobile");
-
-      function enableComputerUsage() {
-        if (computer.hidden) {
-          mobile.hidden = true;
-          computer.hidden = false;
-          initHistory();
-          initContent();
-          runCursor();
-        }
+      function buildPage() {
+        initHistory();
+        initContent();
+        runCursor();
       }
 
-      function enableMobileUsage() {
-        computer.hidden = true;
-        mobile.hidden = false;
-      }
-
-      function adaptDevices() {
-        if (window.innerWidth <= 1100) enableMobileUsage();
-        else enableComputerUsage();
-      }
-
-      enableComputerUsage();
-
-      adaptDevices();
-      window.addEventListener('resize', adaptDevices);
-
+      buildPage();
     </script>
 
   </body>

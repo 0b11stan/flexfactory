@@ -1,6 +1,8 @@
 body {
     overflow-y: overlay;
     color: #333333;
+    /*max-width: 650px;
+    margin: 40px auto;*/
 }
 
 #content-body p {
