@@ -15,3 +15,4 @@ $ docker run --name flexfactory -v $PWD/www/:/usr/share/nginx/html:ro --rm -p 80
 - [ ] Remove js for build projects
 - [ ] Remove js for builf lectures
 - [ ] Remove js for hovers dynamics
+- [ ] Fit for mobiles
