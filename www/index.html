@@ -11,40 +11,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
   </head>
   <body>
-    <div id="main-computer" class="container">
+    <div class="container">
+      <!--TODO: ajouter xmpp / matrix ?-->
+      <!--<a class="fa fa-comment two columns" href="#"></a>-->
+      <a id="cell-gpg"
+         class="links fa fa-key"
+         href="https://sta.tic.sh/tristan-pinaudeau.gpg" download></a>
+      <a id="cell-mail"
+         class="links fa fa-envelope"
+         target="blank"
+         href="mailto:tristan@tic.sh"></a>
+      <a id="cell-linkedin"
+         class="links fab fa-linkedin-in"
+         target="blank"
+         href="https://www.linkedin.com/in/tristan-pinaudeau/"></a>
+      <a id="cell-github"
+         class="links fab fa-github"
+         target="blank"
+         href="https://github.com/0b11stan"></a>
+      <a id="cell-twitter"
+         class="links fab fa-twitter"
+         target="blank"
+         href="https://twitter.com/0b11stan"></a>
+      <a id="cell-resume"
+         class="links fas fa-file-pdf"
+         target="blank"
+         href="https://sta.tic.sh/tristan-pinaudeau.pdf"></a>
 
-      <div class="row">
-        <!--TODO: ajouter xmpp / matrix ?-->
-        <!--<a class="fa fa-comment two columns" href="#"></a>-->
-        <a class="links fa fa-key two columns" href="https://sta.tic.sh/tristan-pinaudeau.gpg" download></a>
-        <a class="links fa fa-envelope two columns" target="blank" href="mailto:tristan@tic.sh"></a>
-        <a class="links fab fa-linkedin-in two columns" target="blank" href="https://www.linkedin.com/in/tristan-pinaudeau/"></a>
-        <a class="links fab fa-github two columns" target="blank" href="https://github.com/0b11stan"></a>
-        <a class="links fab fa-twitter two columns" target="blank" href="https://twitter.com/0b11stan"></a>
-        <a class="links fas fa-file-pdf two columns" target="blank" href="https://sta.tic.sh/tristan-pinaudeau.pdf"></a>
+      <div id="cell-title">
+        <h1 class="title">
+          $ tristan pinaudeau<span id="title-cursor">_</span>
+        </h1>
+        <p class="infos">{ city: bordeaux; age: 22; has_car: true }</p>
       </div>
 
-      <div class="row header">
-        <div class="eight columns">
-          <h1 class="title">$ tristan pinaudeau<span id="title-cursor">_</span></h1>
-          <p class="infos">{ city: bordeaux; age: 22; has_car: true }</p>
-        </div>
-        <div class="four columns">
-          <p class="subject-wrapper">
-            <span class="subject">Informatique</span>
-            <span class="subject">Open Source</span>
-          </p>
-          <p class="subject-wrapper">
-            <span class="subject">Full Stack</span>
-            <span class="subject">DevOps</span>
-            <span class="subject">Agility</span>
-          </p>
-        </div>
+      <div id="cell-subjects">
+        <p class="subject-wrapper">
+          <span class="subject">Informatique</span>
+          <span class="subject">Open Source</span>
+        </p>
+        <p class="subject-wrapper">
+          <span class="subject">Full Stack</span>
+          <span class="subject">DevOps</span>
+          <span class="subject">Agility</span>
+        </p>
       </div>
 
       <div id="history-panel" class="panel">
@@ -160,8 +174,6 @@
         </div>
       </div>
 
-      <br>
-      <br>
       <div id="content-panel" class="panel">
         <div id="content-menu" class="row">
           <h4 id="projects-menu" class="panel-menu disabled one-third column">Projets</h4>
@@ -171,7 +183,7 @@
         <div id="content-body">
           <div hidden id="projects-body"></div>
           <div hidden id="readings-body"></div>
-          <div hidden id="articles-body"><p>Hello Articles !</p></div>
+          <div hidden id="articles-body"></div>
         </div>
       </div>
 

@@ -1,9 +1,35 @@
 body {
     overflow-y: overlay;
     color: #333333;
-    /*max-width: 650px;
-    margin: 40px auto;*/
+    max-width: 850px;
+    margin: auto;
 }
+
+/* GRID SYSTEM */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 2fr 2fr 2fr;
+  grid-template-areas:
+    "c1 c2 c3 c4 c5 c6"
+    "ct ct ct ct cs cs"
+    "hp hp hp hp hp hp"
+    "cp cp cp cp cp cp ";
+}
+
+#cell-gpg      {grid-area: c1;}
+#cell-mail     {grid-area: c2;}
+#cell-linkedin {grid-area: c3;}
+#cell-github   {grid-area: c4;}
+#cell-twitter  {grid-area: c5;}
+#cell-resume   {grid-area: c6;}
+#cell-title    {grid-area: ct;}
+#cell-subjects {grid-area: cs;}
+#history-panel {grid-area: hp;}
+#content-panel {grid-area: cp;}
+
+/* CUSTOM STYLE */
 
 #content-body p {
     text-align: justify;
@@ -40,12 +66,13 @@ body {
     border-bottom-right-radius: 5px;
     text-align: center;
     text-decoration: none;
+    margin: 0 0.5rem;
 }
 
 .links {
     padding: 1rem;
     font-size: 2rem;
-    margin-bottom: 6rem;
+    height: 2rem;
     background: #E5E5E5;
     color: #333333;
 }
@@ -53,7 +80,7 @@ body {
 .links:hover {
     padding: 2rem;
     font-size: 3rem;
-    margin-bottom: 1rem;
+    height: 3rem;
     background: #333333;
     color: #E5E5E5;
 }
