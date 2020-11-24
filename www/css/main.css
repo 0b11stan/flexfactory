@@ -10,7 +10,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.7fr 1fr 2fr 2fr;
+  grid-template-rows: 0.6fr 1fr 2fr 2fr;
   grid-template-areas:
     "c1 c2 c3 c4 c5 c6"
     "ct ct ct ct cs cs"
@@ -43,17 +43,18 @@ body {
 }
 
 .links {
-    padding: 1rem;
-    font-size: 2rem;
-    height: 2rem;
+    padding: 1.5rem;
+    padding-top: 0.8rem;
+    font-size: 1.5rem;
+    height: 1rem;
     background: #E5E5E5;
     color: #333333;
 }
 
 .links:hover {
     padding: 2rem;
-    font-size: 3rem;
-    height: 3rem;
+    font-size: 2rem;
+    height: 2rem;
     background: #333333;
     color: #E5E5E5;
 }
