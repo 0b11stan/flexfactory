@@ -25,7 +25,7 @@ body {
 #cell-twitter  {grid-area: c5;}
 #cell-resume   {grid-area: c6;}
 #cell-title    {grid-area: ct;}
-#cell-subjects {grid-area: cs;}
+#cell-subjects {grid-area: cs; padding: 0;}
 #history-panel {grid-area: hp;}
 #content-panel {grid-area: cp;}
 
@@ -91,10 +91,7 @@ body {
     border-radius: 10px;
     color: #E5E5E5;
     margin: 2px;
-}
-
-.subject-wrapper {
-    padding: 0;
+    display: inline-block;
 }
 
 .panel {
