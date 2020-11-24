@@ -10,7 +10,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.8fr 2fr 2fr 2fr;
+  grid-template-rows: 0.7fr 1fr 2fr 2fr;
   grid-template-areas:
     "c1 c2 c3 c4 c5 c6"
     "ct ct ct ct cs cs"
