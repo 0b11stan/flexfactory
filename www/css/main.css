@@ -5,7 +5,7 @@ body {
     margin: auto;
 }
 
-/* GRID SYSTEM */
+/* grid system */
 
 .container {
   display: grid;
@@ -18,48 +18,21 @@ body {
     "cp cp cp cp cp cp ";
 }
 
+/* helpers */
+
+#content-body p { text-align: justify; }
+
+.no-margin  { margin: 0; }
+.boldify    { font-weight: bold; }
+
+/* links style */
+
 #cell-gpg      {grid-area: c1;}
 #cell-mail     {grid-area: c2;}
 #cell-linkedin {grid-area: c3;}
 #cell-github   {grid-area: c4;}
 #cell-twitter  {grid-area: c5;}
 #cell-resume   {grid-area: c6;}
-#cell-title    {grid-area: ct;}
-#cell-subjects {grid-area: cs; padding: 0;}
-#history-panel {grid-area: hp;}
-#content-panel {grid-area: cp;}
-
-/* CUSTOM STYLE */
-
-#content-body p {
-    text-align: justify;
-}
-
-.rightify   { text-align: right; }
-.no-margin  { margin: 0; }
-.boldify    { font-weight: bold; }
-
-.infos {
-    font-family: "Lucida Console", Monaco, monospace;
-    font-size: 20px;
-    font-weight: lighter;
-}
-
-.header {
-    margin-bottom: 4rem;
-}
-
-.title {
-    font-family: "Lucida Console", Monaco, monospace;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-
-#title-cursor {
-    font-weight: bolder;
-}
-
-
 
 .links, .links:hover {
     border-bottom-left-radius: 5px;
@@ -85,6 +58,33 @@ body {
     color: #E5E5E5;
 }
 
+/* title style */
+
+#cell-title    {grid-area: ct;}
+
+#title {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#title-infos {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#title-cursor {
+    font-weight: bolder;
+}
+
+/* subjects style */
+
+#cell-subjects {
+  grid-area: cs;
+  padding: 0;
+}
+
 .subject {
     background: #333333;
     padding: 8px 15px 8px 15px;
@@ -93,6 +93,8 @@ body {
     margin: 2px;
     display: inline-block;
 }
+
+/* panel styles */
 
 .panel {
     background: #333333;
@@ -108,7 +110,12 @@ body {
     margin-top: 2rem;
     font-family: sans-serif;
     cursor: pointer;
+    display: inherit;
 }
+
+/* history styles */
+
+#history-panel {grid-area: hp;}
 
 .history-content {
     background: #E5E5E5;
@@ -150,6 +157,10 @@ body {
     background: #AFAFAF;
     color: #888888;
 }
+
+/* contents style */
+
+#content-panel { grid-area: cp; }
 
 .disabled {
     color: #888888;
