@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>> Tristan Pinaudeau_</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A very simple website showing my background, my projects and more.">
+    <meta name="author" content="Tristan Pinaudeau">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+  </head>
+  <body>
+    <div class="container">
+      {% for link in links %}
+        <a id="cell-{{ link }}"
+           class="links {{ links[link].icon }}"
+           href="{{ links[link].value }}"
+           {{ "download" if links[link].download else "" }}></a>
+      {% endfor %}
+
+      <div id="cell-title">
+        <h1 id="title">
+          $ tristan pinaudeau<span id="title-cursor">_</span>
+        </h1>
+        <p id="title-infos">{ city: bordeaux; age: 22; has_car: true }</p>
+      </div>
+
+      <div id="cell-subjects">
+        {% for subject in subjects %}
+          <span class="subject">{{ subject }}</span>
+        {% endfor %}
+      </div>
+
+      <div id="history-panel" class="panel">
+        <h2 id="history-menu-2015" class="panel-menu boldify">2015</h2>
+        <h2 id="history-menu-2016" class="panel-menu">2016</h2>
+        <h2 id="history-menu-2017" class="panel-menu">2017</h2>
+        <h2 id="history-menu-2018" class="panel-menu">2018</h2>
+        <h2 id="history-menu-2019" class="panel-menu">2019</h2>
+        <h2 id="history-menu-2020" class="panel-menu">2020</h2>
+        <h2 id="history-menu-2021" class="panel-menu">2021</h2>
+        <div id="history-body" class="row">
+          {% for year in background %}
+            <div hidden id="degree-{{ year }}">
+              {% for degree in background[year].degrees %}
+                <div class="history-sub row">
+                  <h5 class="no-margin history-content sub">{# degree-done #}
+                    {{ degree }}
+                  </h5>
+                  <h5 class="no-margin history-info sub">Diplômes</h5>
+                </div>
+              {% endfor %}
+              {% for experience in background[year].experiences %}
+                <div class="history-sub row">
+                  <h5 class="no-margin history-content sub">
+                    {{ experience }}
+                  </h5>
+                  <h5 class="no-margin history-info sub">Experiences</h5>
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div id="content-panel" class="panel">
+        <div id="content-menu" class="row">
+          <h4 id="projects-menu" class="panel-menu disabled">Projets</h4>
+          <h4 id="readings-menu" class="panel-menu">Lectures</h4>
+          <h4 id="articles-menu" class="panel-menu disabled">Articles</h4>
+        </div>
+        <div id="content-body">
+          <div hidden id="projects-body"></div>
+          <div hidden id="readings-body"></div>
+          <div hidden id="articles-body"></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+
+</html>

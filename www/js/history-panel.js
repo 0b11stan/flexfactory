@@ -1,29 +1,17 @@
 let previousHistory = '2015';
 let currentHistory = '2015';
 let initialized = false;
-let histories = histories_from_html();
-
-function histories_from_html() {
-  let years = [];
-  let nodes = document.getElementById('history-menu').childNodes;
-  for (let i = 1; i <= nodes.length; i = i + 2)
-    if (nodes[i]) years.push(nodes[i].id.slice(-4));
-  return years;
-}
+let histories = ["2015", "2016", "2017", "2018", "2019", "2020", "2021"];
 
 export default function initHistory() {
-  if (! initialized) {
-    histories.map((year) => document.getElementById("history-menu-" + year)
-      .addEventListener('mouseover', function () {
-        displayHistory(year)
-      })
-    );
-    document.getElementById('history-menu-2015').classList.add('offset-by-two');
-    document.getElementById('history-panel').addEventListener('mouseleave', 
-      function () { hideHistory(); }
-    );
-    initialized = true;
-  }
+  histories.map((year) => document.getElementById("history-menu-" + year)
+    .addEventListener('mouseover', function () {
+      displayHistory(year)
+    })
+  );
+  document.getElementById('history-panel').addEventListener('mouseleave', 
+    function () { hideHistory(); console.log("HERE"); }
+  );
 }
 
 function unboldifyMenu() {
@@ -38,6 +26,7 @@ function hideHistory() {
 }
 
 function displayHistory(year) {
+  console.log(currentHistory);
   document.getElementById("history-body").hidden = false;
   previousHistory = currentHistory;
   currentHistory = year;

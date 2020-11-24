@@ -5,12 +5,14 @@ body {
   margin: auto;
 }
 
+h2 { font-weight: normal; }
+
 /* grid system */
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.6fr 1fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr 2fr 2fr;
   grid-template-areas:
     "c1 c2 c3 c4 c5 c6"
     "ct ct ct ct cs cs"
@@ -53,7 +55,7 @@ body {
 
 .links:hover {
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   height: 2rem;
   background: #333333;
   color: #E5E5E5;
@@ -61,11 +63,13 @@ body {
 
 /* title style */
 
-#cell-title  {grid-area: ct;}
+#cell-title  { grid-area: ct; }
 
 #title {
+  margin-top: 0;
   font-family: "Lucida Console", Monaco, monospace;
   font-weight: bold;
+  font-size: 2.8rem;
   margin-bottom: 0;
 }
 
@@ -102,6 +106,7 @@ body {
   color: #E5E5E5;
   border-radius: 10px;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 .panel-menu {
@@ -116,7 +121,24 @@ body {
 
 /* history styles */
 
-#history-panel {grid-area: hp;}
+#history-panel {
+  grid-area: hp;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template: 1fr 1fr;
+  grid-template-areas:
+    "h1 h2 h3 h4 h5 h6 h7"
+    "hx hx hx hx hx hx hx";
+}
+
+#history-menu-2015 { grid-area: h1; }
+#history-menu-2016 { grid-area: h2; }
+#history-menu-2017 { grid-area: h3; }
+#history-menu-2018 { grid-area: h4; }
+#history-menu-2019 { grid-area: h5; }
+#history-menu-2020 { grid-area: h6; }
+#history-menu-2021 { grid-area: h7; }
+#history-body { grid-area: hx; }
 
 .history-content {
   background: #E5E5E5;
@@ -169,7 +191,6 @@ body {
 }
 
 #content-body {
-  margin-bottom: 2rem;
   padding-bottom: 1rem;
 }
 
