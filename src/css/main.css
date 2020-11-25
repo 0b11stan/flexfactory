@@ -12,7 +12,7 @@ h2 { font-weight: normal; }
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr 2fr;
+  grid-template-rows: 1fr 1fr 3fr 2fr;
   grid-template-areas:
     "c1 c2 c3 c4 c5 c6"
     "ct ct ct ct cs cs"
@@ -26,6 +26,10 @@ h2 { font-weight: normal; }
 
 .no-margin  { margin: 0; }
 .boldify    { font-weight: bold; }
+.unanchor {
+  text-decoration: none;
+  color: inherit;
+}
 
 /* links style */
 
@@ -117,68 +121,7 @@ h2 { font-weight: normal; }
   font-family: sans-serif;
   cursor: pointer;
   display: inherit;
-}
-
-/* history styles */
-
-#history-panel {
-  grid-area: hp;
-  display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template: 1fr 1fr;
-  grid-template-areas:
-    "h1 h2 h3 h4 h5 h6 h7"
-    "hx hx hx hx hx hx hx";
-}
-
-#history-menu-2015 { grid-area: h1; }
-#history-menu-2016 { grid-area: h2; }
-#history-menu-2017 { grid-area: h3; }
-#history-menu-2018 { grid-area: h4; }
-#history-menu-2019 { grid-area: h5; }
-#history-menu-2020 { grid-area: h6; }
-#history-menu-2021 { grid-area: h7; }
-#history-body { grid-area: hx; }
-
-.history-content {
-  background: #E5E5E5;
-  border-right-color: #7F7F7F;
-  border-right-style: solid;
-  border-right-width: 1px;
-}
-
-.history-sub {
-  margin: 3rem;
-  color: #333333;
-  border-radius: 10px;
-}
-
-.history-sub > .sub {
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-  border-width: 1px;
-  border-style: solid;
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.history-info {
-  border-color: #7F7F7F;
-  border-width: 3px;
-  text-align: center;
-  background: #404040;
-  color: #E5E5E5;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.degree-done {
-  background: #E5E5E5;
-}
-
-.degree-not-done {
-  background: #AFAFAF;
-  color: #888888;
+  height: 2rem;
 }
 
 /* contents style */

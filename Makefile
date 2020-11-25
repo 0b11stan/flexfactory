@@ -6,9 +6,11 @@ venv:
 
 clean:
 	rm -rf venv
+	rm -rf www/*
 
 build:
-	python main.py
+	cp -r src/css src/img src/webfonts www/
+	cd src && python main.py
 
 serve:
 	python -m http.server --directory www

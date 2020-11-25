@@ -9,9 +9,17 @@
     <meta name="description" content="A very simple website showing my background, my projects and more.">
     <meta name="author" content="Tristan Pinaudeau">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="css/fontawesome.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+
+    {% if selectedyear %}
+      <link rel="stylesheet" href="css/background.css"/>
+    {% else %}
+      <link rel="stylesheet" href="css/index.css"/>
+    {% endif %}
+
     <link rel="icon" type="image/png" href="img/favicon.png">
   </head>
   <body>
@@ -25,7 +33,9 @@
 
       <div id="cell-title">
         <h1 id="title">
-          $ tristan pinaudeau<span id="title-cursor">_</span>
+          <a href="/index.html" class="unanchor">
+            $ tristan pinaudeau<span id="title-cursor">_</span>
+          </a>
         </h1>
         <p id="title-infos">{ city: bordeaux; age: 22; has_car: true }</p>
       </div>
@@ -36,36 +46,36 @@
         {% endfor %}
       </div>
 
-      <div id="history-panel" class="panel">
-        <h2 id="history-menu-2015" class="panel-menu boldify">2015</h2>
-        <h2 id="history-menu-2016" class="panel-menu">2016</h2>
-        <h2 id="history-menu-2017" class="panel-menu">2017</h2>
-        <h2 id="history-menu-2018" class="panel-menu">2018</h2>
-        <h2 id="history-menu-2019" class="panel-menu">2019</h2>
-        <h2 id="history-menu-2020" class="panel-menu">2020</h2>
-        <h2 id="history-menu-2021" class="panel-menu">2021</h2>
-        <div id="history-body" class="row">
+      <div id="background-panel" class="panel">
+        {% for year in background %}
+          <h2 id="background-menu-{{ year }}"
+              class="panel-menu
+                     {{ "boldify" if selectedyear == year else "" }}">
+            <a href="/background_{{ year }}.html" class="unanchor">
+              {{ year }}
+            </a>
+          </h2>
+        {% endfor %}
+        {% if selectedyear %}
           {% for year in background %}
-            <div hidden id="degree-{{ year }}">
-              {% for degree in background[year].degrees %}
-                <div class="history-sub row">
-                  <h5 class="no-margin history-content sub">{# degree-done #}
-                    {{ degree }}
-                  </h5>
-                  <h5 class="no-margin history-info sub">Diplômes</h5>
-                </div>
-              {% endfor %}
-              {% for experience in background[year].experiences %}
-                <div class="history-sub row">
-                  <h5 class="no-margin history-content sub">
-                    {{ experience }}
-                  </h5>
-                  <h5 class="no-margin history-info sub">Experiences</h5>
-                </div>
-              {% endfor %}
-            </div>
+            {% if year == selectedyear %}
+              <div id="background-tiles">
+                {% for degree in background[year].degrees %}
+                  <div class="background-tile">
+                    <h5 class="background-content">{{ degree }}</h5><!--
+                    --><h5 class="background-info">Diplômes</h5>
+                  </div>
+                {% endfor %}
+                {% for experience in background[year].experiences %}
+                  <div class="background-tile">
+                    <h5 class="background-content">{{ experience }}</h5><!--
+                    --><h5 class="background-info">Experiences</h5>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endif %}
           {% endfor %}
-        </div>
+        {% endif %}
       </div>
 
       <div id="content-panel" class="panel">

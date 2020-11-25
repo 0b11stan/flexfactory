@@ -1,0 +1,20 @@
+/* background styles */
+
+.container {
+  grid-template-rows: 1fr 1fr 1fr 2fr;
+}
+
+#background-panel {
+  grid-area: hp;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "ch1 ch2 ch3 ch4 ch5 ch6 ch7";
+}
+
+#background-menu-2015 { grid-area: ch1; }
+#background-menu-2016 { grid-area: ch2; }
+#background-menu-2017 { grid-area: ch3; }
+#background-menu-2018 { grid-area: ch4; }
+#background-menu-2019 { grid-area: ch5; }
+#background-menu-2020 { grid-area: ch6; }
+#background-menu-2021 { grid-area: ch7; }

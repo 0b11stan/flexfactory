@@ -1,0 +1,62 @@
+/* background styles */
+
+#background-panel {
+  grid-area: hp;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 3fr;
+  grid-template-areas:
+    "ch1 ch2 ch3 ch4 ch5 ch6 ch7"
+    "cht cht cht cht cht cht cht";
+}
+
+#background-menu-2015 { grid-area: ch1; }
+#background-menu-2016 { grid-area: ch2; }
+#background-menu-2017 { grid-area: ch3; }
+#background-menu-2018 { grid-area: ch4; }
+#background-menu-2019 { grid-area: ch5; }
+#background-menu-2020 { grid-area: ch6; }
+#background-menu-2021 { grid-area: ch7; }
+#background-tiles {
+  grid-area: cht; 
+  text-align: left;
+}
+
+.background-tile {
+  margin: 1rem;
+}
+
+.background-content {
+  display: inline-block;
+  background: #E5E5E5;
+  color: #333333;
+  padding: 1rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-style: solid;
+  border-color: #E5E5E5;
+  border-width: 2px;
+  margin: 0;
+}
+
+.background-info {
+  display: inline-block;
+  background: #404040;
+  color: #E5E5E5;
+  padding: 1rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-style: solid;
+  border-color: #7F7F7F;
+  border-width: 2px;
+  margin: 0;
+}
+
+.degree-done {
+  background: #E5E5E5;
+}
+
+.degree-not-done {
+  background: #AFAFAF;
+  color: #888888;
+}
