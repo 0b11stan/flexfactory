@@ -40,52 +40,32 @@ subjects = [
 ]
 
 background = {
-    2015: {
-        "degrees": [
-            "Bac S option ISN (Informatique et Science du Numérique)"
-        ]
-    },
-    2016: {
-        "experiences": [
-            "Stage développement full stack à PSI informatique"
-        ]
-    },
-    2017: {
-        "degrees": [
-            "BTS SIO option SLAM spé Mathématiques"
-        ],
-        "experiences": [
-            "Stage développement full stack à Touton",
-            "Alternance à Helloasso"
-        ]
-    },
-    2018: {
-        "degrees": [
-            "Epsi, Titre RNCP Niveau II (DIRRECT)"
-        ],
-        "experiences": [
-            "Alternance à Helloasso",
-            "Alternance à Cdiscount"
-        ]
-    },
-    2019: {
-        "degrees": ["Examen du TOEIC (960/990)"],
-        "experiences": ["Alternance à Cdiscount", ]
-    },
-    2020: {
-        "degrees": [
-            "Epsi, Titre RNCP Niveau I"
-        ],
-        "experiences": [
-            "Alternance à Cdiscount"
-        ]
-    },
-    2021: {
-        "degrees": [
-            "EINSEEIHT, Master Spécialisé Sécurité Informatique",
-        ],
-        "experiences": [
-            "Alternance à Cdiscount"
-        ]
-    },
+    2015: [
+        ("degree","Bac S option ISN (Informatique et Science du Numérique)"),
+    ],
+    2016: [
+        ("experience", "Stage développement full stack à PSI informatique"),
+    ],
+    2017: [
+        ("degree", "BTS SIO option SLAM spé Mathématiques"),
+        ("experience", "Stage développement full stack à Touton"),
+        ("experience", "Alternance à Helloasso"),
+    ],
+    2018: [
+        ("degree", "Epsi, Titre RNCP Niveau II (DIRRECT)"),
+        ("experience", "Alternance à Helloasso"),
+        ("experience", "Alternance à Cdiscount"),
+    ],
+    2019: [
+        ("degree", "Examen du TOEIC (960/990)"),
+        ("experience", "Alternance à Cdiscount"),
+    ],
+    2020: [
+        ("degree", "Epsi, Titre RNCP Niveau I"),
+        ("experience", "Alternance à Cdiscount"),
+    ],
+    2021: [
+        ("degree", "EINSEEIHT, Master Spécialisé Sécurité Informatique"),
+        ("experience", "Alternance à Cdiscount"),
+    ],
 }

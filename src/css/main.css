@@ -25,7 +25,7 @@ h2 { font-weight: normal; }
 #content-body p { text-align: justify; }
 
 .no-margin  { margin: 0; }
-.boldify    { font-weight: bold; }
+/*.boldify    { font-weight: bold; }*/
 .unanchor {
   text-decoration: none;
   color: inherit;
@@ -122,6 +122,9 @@ h2 { font-weight: normal; }
   cursor: pointer;
   display: inherit;
   height: 2rem;
+}
+
+.panel-menu:hover {
 }
 
 /* contents style */

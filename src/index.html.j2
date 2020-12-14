@@ -14,11 +14,91 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <style>
+      /* background styles */
+
+      #background-panel {
+        grid-area: hp;
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr;
+        grid-template-areas:
+          "ch1 ch2 ch3 ch4 ch5 ch6 ch7"
+          "cht cht cht cht cht cht cht";
+      }
+
+      .background-2015.panel-menu { grid-area: ch1; }
+      .background-2016.panel-menu { grid-area: ch2; }
+      .background-2017.panel-menu { grid-area: ch3; }
+      .background-2018.panel-menu { grid-area: ch4; }
+      .background-2019.panel-menu { grid-area: ch5; }
+      .background-2020.panel-menu { grid-area: ch6; }
+      .background-2021.panel-menu { grid-area: ch7; }
+      .background-tiles {
+        grid-area: cht;
+        text-align: left;
+        z-index: 50;
+        background: #333333;
+      }
+
+      {% for year in background %}
+        #background-{{ year }} { z-index: 0; }
+        #background-{{ year }}.panel-menu:hover { font-weight: bold; }
+        #background-{{ year }}:hover { z-index: 100; }
+        #background-{{ year }}:hover ~ #background-{{ year }} {
+          font-weight: bold;
+          z-index: 100;
+        }
+      {% endfor %}
+
+      .background-tile { position: relative; margin: 0 2rem; }
+      .background-tile.offset-1 { margin-top: 5rem; }
+      .background-tile.offset-2 { margin-top: 10rem; }
+
+      .background-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        display: inline-block;
+        background: #E5E5E5;
+        color: #333333;
+        padding: 1rem;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: #E5E5E5;
+        border-width: 2px;
+        margin: 0;
+      }
+
+      .background-info {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        background: #404040;
+        color: #E5E5E5;
+        padding: 1rem;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-style: solid;
+        border-color: #7F7F7F;
+        border-width: 2px;
+        margin: 0;
+      }
+
+      .degree-done { background: #E5E5E5; }
+      .degree-not-done {
+        background: #AFAFAF;
+        color: #888888;
+      }
+    </style>
+
+    {#
     {% if selectedyear %}
       <link rel="stylesheet" href="css/background.css"/>
     {% else %}
       <link rel="stylesheet" href="css/index.css"/>
     {% endif %}
+    #}
 
     <link rel="icon" type="image/png" href="img/favicon.png">
   </head>
@@ -48,34 +128,26 @@
 
       <div id="background-panel" class="panel">
         {% for year in background %}
-          <h2 id="background-menu-{{ year }}"
-              class="panel-menu
+          <h2 class="panel-menu background-{{ year }}
                      {{ "boldify" if selectedyear == year else "" }}">
-            <a href="/background_{{ year }}.html" class="unanchor">
-              {{ year }}
-            </a>
+            <a href="#" class="unanchor">{{ year }}</a>
           </h2>
         {% endfor %}
-        {% if selectedyear %}
-          {% for year in background %}
-            {% if year == selectedyear %}
-              <div id="background-tiles">
-                {% for degree in background[year].degrees %}
-                  <div class="background-tile">
-                    <h5 class="background-content">{{ degree }}</h5><!--
-                    --><h5 class="background-info">Diplômes</h5>
-                  </div>
-                {% endfor %}
-                {% for experience in background[year].experiences %}
-                  <div class="background-tile">
-                    <h5 class="background-content">{{ experience }}</h5><!--
-                    --><h5 class="background-info">Experiences</h5>
-                  </div>
-                {% endfor %}
+        {% for year in background %}
+          <div id="background-tiles">
+            {% for element in background[year] %}
+              <div class="background-tile offset-{{loop.index - 1}}">
+                {% if element[0] == "degree" %}
+                  <h5 class="background-content">{{element[1]}}</h5><!--
+                  --><h5 class="background-info">Diplômes</h5>
+                {% elif element[0] == "experience" %}
+                  <h5 class="background-content">{{element[1]}}</h5><!--
+                  --><h5 class="background-info">Experiences</h5>
+                {% endif %}
               </div>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
+            {% endfor %}
+          </div>
+        {% endfor %}
       </div>
 
       <div id="content-panel" class="panel">

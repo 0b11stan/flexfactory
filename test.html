@@ -1,0 +1,61 @@
+<style>
+  .aaa {
+    z-index: 0;
+    display: inline-block;
+    width: 50px;
+    background-color: red;
+  }
+  .aaa:hover {
+    z-index: 100;
+  }
+  .aaa:hover ~ .aaa {
+    /*z-index: 100;*/
+  }
+  .bbb {
+    z-index: 0;
+    display: inline-block;
+    width: 50px;
+    background-color: blue;
+  }
+  .bbb:hover {
+    z-index: 100;
+  }
+  .bbb:hover ~ .bbb {
+    z-index: 100;
+  }
+  .ccc {
+    z-index: 0;
+    display: inline-block;
+    width: 50px;
+    background-color: green;
+  }
+  .ccc:hover {
+    z-index: 100;
+  }
+  .ccc:hover ~ .ccc {
+    z-index: 100;
+  }
+
+  .content {
+    position: absolute;
+    width: 100px;
+  }
+  .blocks {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+    padding: 15px;
+  }
+</style>
+<div>
+  <div class="aaa">A</div>
+  <div class="bbb">B</div>
+  <div class="ccc">C</div>
+  <br>
+  <!--<div class="blocks">-->
+    <div class="aaa content">block A</div>
+    <div class="bbb content">block B</div>
+    <div class="ccc content">block C</div>
+    <!--</div>-->
+</div>

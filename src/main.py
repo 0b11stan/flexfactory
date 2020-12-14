@@ -1,32 +1,23 @@
 from jinja2 import Template
 from config import *
 
-TEMPLATE_PATH = "index.html.j2"
+TEMPLATE_INDEX = "index.html.j2"
+TEMPLATE_STYLE = "css/background.css.j2"
 
-def build_background(template, year):
-    with open(f"../www/background_{year}.html", 'w') as ofile:
-        ofile.write(template.render(
-            subjects=subjects,
-            background=background,
-            links=links,
-            selectedyear=year
-        ))
 
-def build_index(template):
+def build_index():
+    with open(TEMPLATE_INDEX, 'r') as tfile:
+        template = Template(tfile.read())
     with open("../www/index.html", 'w') as ofile:
         ofile.write(template.render(
             subjects=subjects,
             background=background,
-            links=links,
+            links=links
         ))
 
-def main():
-    with open(TEMPLATE_PATH, 'r') as tfile:
-        template = Template(tfile.read())
-    build_index(template)
-    for year in background:
-        build_background(template, year)
 
+def main():
+    build_index()
 
 
 if __name__ == "__main__":

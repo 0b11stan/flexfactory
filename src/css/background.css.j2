@@ -10,29 +10,41 @@
     "cht cht cht cht cht cht cht";
 }
 
-#background-menu-2015 { grid-area: ch1; }
-#background-menu-2016 { grid-area: ch2; }
-#background-menu-2017 { grid-area: ch3; }
-#background-menu-2018 { grid-area: ch4; }
-#background-menu-2019 { grid-area: ch5; }
-#background-menu-2020 { grid-area: ch6; }
-#background-menu-2021 { grid-area: ch7; }
+#background-2015.panel-menu { grid-area: ch1; }
+#background-2016.panel-menu { grid-area: ch2; }
+#background-2017.panel-menu { grid-area: ch3; }
+#background-2018.panel-menu { grid-area: ch4; }
+#background-2019.panel-menu { grid-area: ch5; }
+#background-2020.panel-menu { grid-area: ch6; }
+#background-2021.panel-menu { grid-area: ch7; }
 #background-tiles {
   grid-area: cht; 
   text-align: left;
 }
 
+{% for year in background %}
+  #background-{{ year }} { z-index: 0; }
+  #background-{{ year }}:hover { z-index: 100; }
+  #background-{{ year }}:hover ~ #background-{{ year }} { z-index: 100; }
+{% endfor %}
+
 .background-tile {
-  margin: 1rem;
+  position: relative;
+  margin: 0 2rem;
 }
 
+.background-tile.offset-1 { margin-top: 5rem; }
+.background-tile.offset-2 { margin-top: 10rem; }
+
 .background-content {
+  position: absolute;
+  left: 0;
+  right: 0;
   display: inline-block;
   background: #E5E5E5;
   color: #333333;
   padding: 1rem;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-radius: 10px;
   border-style: solid;
   border-color: #E5E5E5;
   border-width: 2px;
@@ -40,6 +52,8 @@
 }
 
 .background-info {
+  position: absolute;
+  right: 0;
   display: inline-block;
   background: #404040;
   color: #E5E5E5;
