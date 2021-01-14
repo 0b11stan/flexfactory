@@ -1,5 +1,20 @@
 export const books = [
     {
+        title: "La structure des révolutions scientifiques",
+        author: "Thomas S. Kuhn",
+        picture: "img/r_structure_revolution_science.jpg"
+    },
+    {
+        title: "Des raisons d'être heureux",
+        author: "Greg Egan",
+        picture: "img/r_raisons_heureux.jpg"
+    },
+    {
+        title: "Sapiens - A Brief History of Humankind",
+        author: "Yuval Noah Harari",
+        picture: "img/r_sapiens.jpg"
+    },
+    {
         title: "How to fix social media before it's too late, an early investor on how Facebook lost its way.",
         author: "Roger McNamee - Tim Cook - Donald Graham - Maria Ressa",
         picture: "img/r_time_social_medias.jpg"
