@@ -1,5 +1,10 @@
 export const books = [
     {
+        title: "La Mythologie Viking",
+        author: "Neil Gaiman",
+        picture: "img/r_viking.jpg"
+    },
+    {
         title: "La structure des révolutions scientifiques",
         author: "Thomas S. Kuhn",
         picture: "img/r_structure_revolution_science.jpg"
@@ -33,6 +38,11 @@ export const books = [
         title: "1984",
         author: "George Orwell",
         picture: "img/r_1984.jpg"
+    },
+    {
+        title: "Zero To One",
+        author: "Peter Thiel",
+        picture: "img/r_zero.jpg"
     },
     {
         title: "La formule du Savoir",
