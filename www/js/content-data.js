@@ -1,5 +1,15 @@
 export const books = [
     {
+        title: "Le cycle Fondation - Fondation",
+        author: "Isaac Asimov",
+        picture: "img/fondation1.jpg"
+    },
+    {
+        title: "Exploration des techniques de Reverse Engineering",
+        author: "MISC n°92",
+        picture: "img/misc92.jpg"
+    },
+    {
         title: "La Mythologie Viking",
         author: "Neil Gaiman",
         picture: "img/r_viking.jpg"

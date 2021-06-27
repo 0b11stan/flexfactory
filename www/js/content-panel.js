@@ -9,7 +9,7 @@ export default function initContent() {
 }
 
 function initContentMenu() {
-  [/*'projects',*/ 'readings'/*, 'articles'*/].forEach((content) => {
+  [/*'projects',*/ 'readings', 'articles'].forEach((content) => {
       document.getElementById(content + '-menu').addEventListener('mouseover',
           function () { show(content); }
       );
