@@ -31,9 +31,14 @@ body {
 
 #title-cursor {
     font-weight: bolder;
+    animation: blink-animation 2s steps(2, start) infinite;
 }
 
-
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+}
 
 .links, .links:hover {
     border-bottom-left-radius: 5px;

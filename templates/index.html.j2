@@ -113,21 +113,9 @@
       import initHistory from "./js/history-panel.js";
       import initContent from "./js/content-panel.js";
 
-      function runCursor() {
-        window.setInterval(function () {
-          document.getElementById('title-cursor').innerHTML = '_';
-        }, 2000);
-        window.setTimeout(function () {
-          window.setInterval(function () {
-            document.getElementById('title-cursor').innerHTML = '';
-          }, 2000);
-        }, 1000);
-      }
-
       function buildPage() {
         initHistory();
         initContent();
-        runCursor();
       }
 
       buildPage();
