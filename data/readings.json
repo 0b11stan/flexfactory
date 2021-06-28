@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Le cycle Fondation - Fondation",
+        "author": "Isaac Asimov",
+        "picture": "img/fondation1.jpg"
+    },
+    {
+        "title": "Exploration des techniques de Reverse Engineering",
+        "author": "MISC n°92",
+        "picture": "img/misc92.jpg"
+    },
+    {
+        "title": "La Mythologie Viking",
+        "author": "Neil Gaiman",
+        "picture": "img/r_viking.jpg"
+    },
+    {
+        "title": "La structure des révolutions scientifiques",
+        "author": "Thomas S. Kuhn",
+        "picture": "img/r_structure_revolution_science.jpg"
+    },
+    {
+        "title": "Des raisons d'être heureux",
+        "author": "Greg Egan",
+        "picture": "img/r_raisons_heureux.jpg"
+    },
+    {
+        "title": "Sapiens - A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "picture": "img/r_sapiens.jpg"
+    },
+    {
+        "title": "How to fix social media before it's too late, an early investor on how Facebook lost its way.",
+        "author": "Roger McNamee - Tim Cook - Donald Graham - Maria Ressa",
+        "picture": "img/r_time_social_medias.jpg"
+    },
+    {
+        "title": "Serious Cryptography",
+        "author": "Jean-Philippe Aumasson",
+        "picture": "img/r_serious_crypto.jpg"
+    },
+    {
+        "title": "Le Joueur d'échecs",
+        "author": "Stefan Zweig",
+        "picture": "img/r_le_joueur_decheque.jpg"
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "picture": "img/r_1984.jpg"
+    },
+    {
+        "title": "Zero To One",
+        "author": "Peter Thiel",
+        "picture": "img/r_zero.jpg"
+    },
+    {
+        "title": "La formule du Savoir",
+        "author": "Lê Nguyen Hoang",
+        "picture": "img/r_la_formule_du_savoir.jpg"
+    },
+    {
+        "title": "Méditations métaphysiques",
+        "author": "René Descartes",
+        "picture": "img/r_meditations_metaphysiques.jpg"
+    },
+    {
+        "title": "L'inconditionnel",
+        "author": "www.revenudebase.info",
+        "picture": "img/r_l_inconditionnel.jpg"
+    },
+    {
+        "title": "La pensée radicale",
+        "author": "Jean Baudrillard",
+        "picture": "img/r_la_pensee_radicale.jpg"
+    },
+    {
+        "title": "Patients",
+        "author": "Grand Corps Malade",
+        "picture": "img/r_patients.jpg"
+    }
+]

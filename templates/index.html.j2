@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+    <title>> Tristan Pinaudeau_</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A very simple website showing my background, my projects and more.">
+    <meta name="author" content="Tristan Pinaudeau">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+  </head>
+  <body>
+    <div id="main-computer" class="container">
+
+      <div class="row">
+        <a class="links fa fa-key two columns" href="https://sta.tic.sh/tristan-pinaudeau.gpg" download></a>
+        <a class="links fa fa-envelope two columns" target="blank" href="mailto:tristan@tic.sh"></a>
+        <a class="links fab fa-linkedin-in two columns" target="blank" href="https://www.linkedin.com/in/tristan-pinaudeau/"></a>
+        <a class="links fab fa-github two columns" target="blank" href="https://github.com/0b11stan"></a>
+        <a class="links fab fa-twitter two columns" target="blank" href="https://twitter.com/0b11stan"></a>
+        <a class="links fas fa-file-pdf two columns" target="blank" href="https://sta.tic.sh/tristan-pinaudeau.pdf"></a>
+      </div>
+
+      <div class="row header">
+        <div class="eight columns">
+          <h1 class="title">$ tristan pinaudeau<span id="title-cursor">_</span></h1>
+          <p class="infos">{ city: bordeaux; age: 22; has_car: true }</p>
+        </div>
+        <div class="four columns">
+          <p class="subject-wrapper">
+            <span class="subject">Informatique</span>
+            <span class="subject">Open Source</span>
+          </p>
+          <p class="subject-wrapper">
+            <span class="subject">Security</span>
+            <span class="subject">DevOps</span>
+            <span class="subject">Agility</span>
+          </p>
+        </div>
+      </div>
+
+      <div id="history-panel" class="panel">
+        <div id="history-menu" class="row">
+          {% for year in background %}
+          <h5 id="history-menu-{{year}}"
+            class="panel-menu one column {% if loop.index == 0 %}offset-by-two{% endif %}">{{year}}</h5>
+          {% endfor %}
+        </div>
+        <div id="history-body" class="row">
+          {% for year in background %}
+          <div hidden id="degree-{{ year }}">
+            {% for degree in background[year].degrees %}
+            <div class="history-sub row">
+              <h5 class="no-margin history-content ten columns sub degree-done">
+                {{ degree }}
+              </h5>
+              <h5 class="no-margin history-info sub">Diplômes</h5>
+            </div>
+            {% endfor %}
+            {% for experience in background[year].experiences %}
+            <div class="history-sub row">
+              <h5 class="no-margin history-content ten columns sub">
+                {{ experience }}
+              </h5>
+              <h5 class="no-margin history-info sub">Experiences</h5>
+            </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <div id="content-panel" class="panel">
+        <div id="content-menu" class="row">
+          <h4 id="projects-menu" class="panel-menu disabled one-third column">Projets</h4>
+          <h4 id="readings-menu" class="panel-menu one-third column">Lectures</h4>
+          <h4 id="articles-menu" class="panel-menu one-third column">Articles</h4>
+        </div>
+        <div id="content-body">
+          <div hidden id="projects-body"></div>
+          <div hidden id="readings-body"></div>
+          <div hidden id="articles-body">
+            <div class=content-panel>
+              <a href="thc-2021-mission-impossible.html">THC 2021 - Writups : Mission Impossible</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="module">
+      import initHistory from "./js/history-panel.js";
+      import initContent from "./js/content-panel.js";
+
+      function runCursor() {
+        window.setInterval(function () {
+          document.getElementById('title-cursor').innerHTML = '_';
+        }, 2000);
+        window.setTimeout(function () {
+          window.setInterval(function () {
+            document.getElementById('title-cursor').innerHTML = '';
+          }, 2000);
+        }, 1000);
+      }
+
+      function buildPage() {
+        initHistory();
+        initContent();
+        runCursor();
+      }
+
+      buildPage();
+    </script>
+
+  </body>
+
+</html>
