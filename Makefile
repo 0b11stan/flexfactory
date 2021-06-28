@@ -1,6 +1,7 @@
-up:
-	docker run --volume $$PWD/www/:/usr/share/nginx/html/ --rm --name flexfactory flexfactory
-
-build:
-	cp -r files www/
+www:
+	-mkdir www
+	cp -r files/* www/
 	python build.py
+
+clean:
+	rm -r www
