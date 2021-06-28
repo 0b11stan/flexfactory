@@ -86,7 +86,19 @@
         </div>
         <div id="content-body">
           <div hidden id="projects-body"></div>
-          <div hidden id="readings-body"></div>
+          <div hidden id="readings-body">
+            {% for reading in readings %}
+            <div class="content-panel row">
+              <div class="eight columns">
+                <h4 style="font-family: sans-serif;" class="book-title">{{ reading.title }}</h4>
+                <h5 class="book-author">{{ reading.author }}</h5>
+              </div>
+              <div class="four columns">
+                <img class="content-pic" src="{{ reading.picture }}" width="200">
+              </div>
+            </div>
+            {% endfor %}
+          </div>
           <div hidden id="articles-body">
             <div class=content-panel>
               <a href="thc-2021-mission-impossible.html">THC 2021 - Writups : Mission Impossible</a>
