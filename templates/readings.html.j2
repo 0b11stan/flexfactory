@@ -1,0 +1,17 @@
+{% extends "base.html.j2" %}
+
+{% block body %}
+  {% for reading in readings %}
+  <div class="content-panel row">
+    <div class="eight columns">
+      <h4 style="font-family: sans-serif;" class="book-title">
+        {{ reading.title }}
+      </h4>
+      <h5 class="book-author">{{ reading.author }}</h5>
+    </div>
+    <div class="four columns">
+      <img class="content-pic" src="{{ reading.picture }}" width="200">
+    </div>
+  </div>
+  {% endfor %}
+{% endblock %}

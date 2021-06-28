@@ -80,30 +80,24 @@
       <br>
       <div id="content-panel" class="panel">
         <div id="content-menu" class="row">
-          <h4 id="projects-menu" class="panel-menu disabled one-third column">Projets</h4>
-          <h4 id="readings-menu" class="panel-menu one-third column">Lectures</h4>
-          <h4 id="articles-menu" class="panel-menu one-third column">Articles</h4>
+          <a href="#">
+            <h4 id="projects-menu" class="panel-menu disabled one-third column">
+              Projets
+            </h4>
+          </a>
+          <a href="/readings.html">
+            <h4 id="readings-menu" class="panel-menu one-third column {%if readings%}boldify{%endif%}">
+              Lectures
+            </h4>
+          </a>
+          <a href="/articles.html">
+            <h4 id="articles-menu" class="panel-menu one-third column {%if articles%}boldify{%endif%}">
+              Articles
+            </h4>
+          </a>
         </div>
         <div id="content-body">
-          <div hidden id="projects-body"></div>
-          <div hidden id="readings-body">
-            {% for reading in readings %}
-            <div class="content-panel row">
-              <div class="eight columns">
-                <h4 style="font-family: sans-serif;" class="book-title">{{ reading.title }}</h4>
-                <h5 class="book-author">{{ reading.author }}</h5>
-              </div>
-              <div class="four columns">
-                <img class="content-pic" src="{{ reading.picture }}" width="200">
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          <div hidden id="articles-body">
-            <div class=content-panel>
-              <a href="thc-2021-mission-impossible.html">THC 2021 - Writups : Mission Impossible</a>
-            </div>
-          </div>
+          {% block body %}{% endblock %}
         </div>
       </div>
 
@@ -111,11 +105,9 @@
 
     <script type="module">
       import initHistory from "./js/history-panel.js";
-      import initContent from "./js/content-panel.js";
 
       function buildPage() {
         initHistory();
-        initContent();
       }
 
       buildPage();
